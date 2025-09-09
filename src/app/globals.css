@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Poppins Font */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/fonts/Poppins-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  color: white;
+}
+
+.gradient-background {
+  background: linear-gradient(135deg, #3b10d8 0%, #3f15d9 41.5%, #fef7f8 100%),
+    radial-gradient(
+      90.56% 90.56% at 100% 4.95%,
+      #1bf8fd 0%,
+      rgba(28, 241, 252, 0.6) 33.81%,
+      rgba(159, 133, 243, 0.3) 66.14%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      41.76% 41.76% at 1.67% 16.67%,
+      rgba(59, 16, 216, 0.8) 0%,
+      rgba(59, 16, 216, 0) 100%
+    );
+  background-blend-mode: overlay;
+}
+
+.about-gradient {
+  background: linear-gradient(
+    128.38deg,
+    #fcf0f8 2.64%,
+    rgba(206, 163, 247, 0.670531) 37.08%,
+    rgba(190, 137, 247, 0.56) 52.37%,
+    rgba(106, 87, 245, 0.5) 93.1%
+  );
+}
+
+/* styles.css */
+.hover-gradient {
+  transition: background 0.3s ease;
+}
+
+.hover-gradient:hover {
+  background: linear-gradient(
+    122.23deg,
+    #fcf0f8 5.68%,
+    #8b6de5 38.56%,
+    #481fda 72.69%,
+    #3b10d8 96.81%
+  );
+}
+
+.gradient-text {
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(135deg, #3b10d8 0%, #3f15d9 41.5%, #fef7f8 100%),
+    radial-gradient(
+      90.56% 90.56% at 100% 4.95%,
+      #1bf8fd 0%,
+      rgba(28, 241, 252, 0.6) 33.81%,
+      rgba(159, 133, 243, 0.3) 66.14%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      41.76% 41.76% at 1.67% 16.67%,
+      rgba(59, 16, 216, 0.8) 0%,
+      rgba(59, 16, 216, 0) 100%
+    );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.process-gradient {
+  background: linear-gradient(180deg, #9747ff 0%, #3f15d9 100%);
+}
