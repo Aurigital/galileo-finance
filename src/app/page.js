@@ -1,40 +1,14 @@
 "use client";
-import dynamic from "next/dynamic";
+import Navbar from "@/app/components/navbar";
+import Footer from "@/app/components/footer";
 
-const DynamicHero = dynamic(() => import("./components/Hero"), { ssr: false });
-const DynamicChallenge = dynamic(() => import("./components/Features"), {
-  ssr: false,
-});
-const DynamicPartner = dynamic(() => import("./components/Solution"), {
-  ssr: false,
-});
-const DynamicSecurity = dynamic(() => import("./components/Security"), {
-  ssr: false,
-});
-const DynamicService = dynamic(() => import("./components/Service"), {
-  ssr: false,
-});
-const DynamicProcess = dynamic(() => import("./components/Process"), {
-  ssr: false,
-});
-const DynamicAbout = dynamic(() => import("./components/About"), {
-  ssr: false,
-});
-const DynamicFooter = dynamic(() => import("./components/Footer"), {
-  ssr: false,
-});
-
-export default function Home() {
+export default function Galileo() {
   return (
-    <div>
-      <DynamicHero />
-      <DynamicChallenge />
-      <DynamicPartner />
-      <DynamicSecurity />
-      <DynamicService />
-      <DynamicProcess />
-      <DynamicAbout />
-      <DynamicFooter />
+    <>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
     </div>
+    <Footer />
+    </>
   );
 }
