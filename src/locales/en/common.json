@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "about": "About",
+    "features": "Features",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "cta": {
+    "download": "Download the App"
+  },
+  "hero": {
+    "title_line1": "Your money,",
+    "title_line2": "easier and modern",
+    "subtitle_line1": "The promise is simple:",
+    "subtitle": "Control all your money and digital assets from one place, easily, securely, and always within reach."
+  },
+  "features": {
+    "title": "What Galileo does for you",
+    "items": [
+      {
+        "title": "All your money in one place",
+        "description": "Colones, dollars and crypto in a single app. Swap your traditional money to digital assets instantly."
+      },
+      {
+        "title": "Send and receive money instantly",
+        "description": "Make transfers to other Galileo users or to any bank in Costa Rica."
+      },
+      {
+        "title": "Pay and get paid stress‑free",
+        "description": "Colones, dollars and crypto in a single app. Swap your traditional money to digital assets instantly."
+      },
+      {
+        "title": "Grow your money",
+        "description": "Colones, dollars and crypto in a single app. Swap your traditional money to digital assets instantly."
+      },
+      {
+        "title": "Tools for your life and your tico business",
+        "description": "Colones, dollars and crypto in a single app. Swap your traditional money to digital assets instantly."
+      }
+    ]
+  },
+  "valueBanner": {
+    "title_line": "Imagine a world without financial limits",
+    "preamble": "We're not just another app;",
+    "bold": "we are the first Fintech that manages digital assets",
+    "postscript": "offering you a fluid, secure financial experience that truly understands you."
+  }
+} 

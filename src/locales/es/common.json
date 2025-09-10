@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "about": "Acerca de",
+    "features": "Funciones",
+    "team": "Equipo",
+    "contact": "Contacto"
+  },
+  "cta": {
+    "download": "Descargá la App"
+  },
+  "hero": {
+    "title_line1": "Tu dinero, más",
+    "title_line2": "fácil y moderno",
+    "subtitle_line1": "La promesa es simple:",
+    "subtitle": "Controlá todo tu dinero y activos digitales desde un solo lugar de forma fácil, segura y siempre a tu alcance."
+  },
+  "features": {
+    "title": "Lo que Galileo hace por vos",
+    "items": [
+      {
+        "title": "Todo tu dinero en un solo lugar",
+        "description": "Colones, dólares y cripto en una sola app. Cambiá tu dinero tradicional a activos digitales al instante."
+      },
+      {
+        "title": "Enviá y recibí dinero al instante",
+        "description": "Realizá transferencias de dinero a otros usuarios de Galileo, a cualquier banco en Costa Rica."
+      },
+      {
+        "title": "Pagá y cobrá sin estrés",
+        "description": "Colones, dólares y cripto en una sola app. Cambiá tu dinero tradicional a activos digitales al instante."
+      },
+      {
+        "title": "Hacé crecer tu dinero",
+        "description": "Colones, dólares y cripto en una sola app. Cambiá tu dinero tradicional a activos digitales al instante."
+      },
+      {
+        "title": "Herramientas para tu vida y tu negocio tico",
+        "description": "Colones, dólares y cripto en una sola app. Cambiá tu dinero tradicional a activos digitales al instante."
+      }
+    ]
+  },
+  "valueBanner": {
+    "title_line": "Imaginá un mundo financiero sin límites",
+    "preamble": "No somos solo una app más;",
+    "bold": "somos la primera Fintech que maneja activos digitales",
+    "postscript": "ofreciéndote una experiencia financiera fluida, segura y que realmente te entiende."
+  }
+} 

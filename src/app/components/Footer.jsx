@@ -6,35 +6,31 @@ const Footer = () => {
   return (
     <footer className="bg-[#141414] text-black py-16 font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center space-y-12">
-          {/* Logo */}
-          <div className="w-48">
+        <div className="flex flex-col items-center text-center">
+          <div className="w-48 mb-10">
             <Image
-              src="/assets/logo-gradient.png"
+              src="/assets/logo-footer.svg"
               alt="Galileo Logo"
               width={192}
               height={48}
               className="w-full h-auto"
               unoptimized
+              loading="lazy"
             />
           </div>
 
-          {/* Mensaje Principal */}
-          <p className="text-lg max-w-3xl text-gray-300">
-            Unete a la comunidad Galileo y descubrí la libertad financiera sin 
-            límites, donde tus finanzas se adaptan a vos, no al revés.
+          <p className="text-lg max-w-xl text-white mb-12">
+          Únete a la comunidad Galileo y descubrí la libertad financiera sin límites, donde tus finanzas se adaptan a vos, no al revés. 
           </p>
 
-          {/* Título de Contacto */}
-          <h3 className="text-2xl font-semibold">
+          <h3 className="text-2xl font-semibold mb-6">
             ¿Tenés Preguntas? Contáctanos
           </h3>
 
-          {/* Información de Contacto */}
-          <div className="flex flex-wrap justify-center gap-8 text-gray-300">
+          <div className="flex flex-wrap justify-center gap-8 text-white">
             <Link 
               href="mailto:contacto@galileo.finance"
-              className="flex items-center space-x-2 hover:text-white transition-colors"
+              className="flex items-center space-x-2 hover:text-cyan-300 transition-colors"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -44,7 +40,7 @@ const Footer = () => {
 
             <Link 
               href="https://instagram.com/galileo_finance"
-              className="flex items-center space-x-2 hover:text-white transition-colors"
+              className="flex items-center space-x-2 hover:text-cyan-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -56,7 +52,7 @@ const Footer = () => {
 
             <Link 
               href="https://wa.me/+506XXXXXXXX"
-              className="flex items-center space-x-2 hover:text-white transition-colors"
+              className="flex items-center space-x-2 hover:text-cyan-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
