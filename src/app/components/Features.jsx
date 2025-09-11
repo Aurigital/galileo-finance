@@ -20,19 +20,21 @@ const Features = () => {
 	return (
 		<section id="features" className="">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-10 md:mb-14 font-poppins">
+				<h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-10 md:mb-14 font-poppins" data-aos="fade-right">
 					{t('features.title')}
 				</h2>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 					{Array.isArray(items) && items.slice(0, 4).map((item, index) => (
+						<div data-aos="fade-right">
 						<FeatureCard
 							key={index}
 							title={item.title}
 							description={item.description}
-						/>
+							/>
+						</div>
 					))}
 					{Array.isArray(items) && items[4] && (
-						<div className="md:col-span-2">
+						<div className="md:col-span-2" data-aos="fade-up">
 							<FeatureCard title={items[4].title} description={items[4].description} emphasis />
 						</div>
 					)}

@@ -14,11 +14,11 @@ export default function HowItWorks() {
         <div className="overflow-visible xl:h-[550px] flex items-end">
           <div className="flex xl:flex-row gap-0 rounded-3xl w-full border border-white/10 bg-gradient-to-br from-slate-900/50 to-purple-900/30">
             <div className="px-8 md:px-12 pt-8 md:pt-12 xl:pb-12 flex flex-col justify-center xl:w-[40%]">
-              <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight font-poppins">
+              <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight font-poppins" data-aos="fade-right">
                 {t('howItWorks.title_line1')}<br />
                 {t('howItWorks.title_line2')}
               </h2>
-              <p className="mt-3 text-white font-poppins text-lg md:text-xl lg:text-2xl xl:text-3xl">
+              <p className="mt-3 text-white font-poppins text-lg md:text-xl lg:text-2xl xl:text-3xl" data-aos="fade-left">
                 {t('howItWorks.subtitle')}
               </p>
 
@@ -48,7 +48,7 @@ export default function HowItWorks() {
 
         <div className="mt-10 grid grid-cols-1">
           {Array.isArray(steps) && steps.map((step, idx) => (
-            <div key={idx} className="flex flex-col md:flex-row items-center">
+            <div key={idx} className="flex flex-col md:flex-row items-center" data-aos="fade-up" data-aos-delay={idx * 100}>
               <div className="w-52 h-52 rounded-full bg-[url('/assets/UiCircle.png')] bg-contain bg-center bg-no-repeat flex items-center justify-center text-white font-bold text-4xl">
                 {idx + 1}
               </div>

@@ -35,7 +35,7 @@ export default function InfiniteCarousel() {
 
   return (
     <section className="w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-right">
             <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-10 md:mb-14 font-poppins">
                 {t('services.title_line1')} <br />
                 {t('services.title_line2')}
@@ -45,7 +45,7 @@ export default function InfiniteCarousel() {
       <div className="w-full">
         <Slider {...settings}>
           {Array.isArray(items) && items.map((item, index) => (
-            <div key={index} className="px-3 md:px-4">
+            <div key={index} className="px-3 md:px-4" data-aos="fade-up">
               <article className="rounded-3xl bg-black/30 p-0 overflow-hidden">
                 <div className="relative w-full h-64 md:h-auto md:aspect-[8/5]">
                   {item?.image && (

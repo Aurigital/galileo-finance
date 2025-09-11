@@ -17,7 +17,7 @@ const ValueBanner = () => {
 			</div>
 
 			<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-3 w-full">
-				<div className="w-full max-w-[32rem]">
+				<div className="w-full max-w-[32rem]" data-aos="fade-right">
 					<h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[2.9rem] font-extrabold font-poppins text-left" style={{ lineHeight: '1.1' }}>
 						{t('valueBanner.title_line')}
 					</h2>

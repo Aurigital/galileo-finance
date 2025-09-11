@@ -32,13 +32,13 @@ export default function Team() {
 	return (
 		<section id="team" className="">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-2 font-poppins">
+				<h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-2 font-poppins" data-aos="fade-right">
 					{t('team.title_line1')}
 					<br />
 					{t('team.title_line2')}
 				</h2>
 
-				<div className="mt-8">
+				<div className="mt-8" data-aos="fade-right">
 					<h3 className="text-white font-poppins font-bold text-xl md:text-2xl">{t('team.about.title')}</h3>
 					<div className="mt-4 space-y-4">
 						{Array.isArray(aboutParagraphs) && aboutParagraphs.map((p, i) => (
@@ -49,16 +49,18 @@ export default function Team() {
 					</div>
 				</div>
 
-				<div className="mt-10">
+				<div className="mt-10" data-aos="fade-right">
 					<h3 className="text-white font-poppins font-bold text-xl md:text-2xl">{t('team.executives.title')}</h3>
 					<div className="mt-6 flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-16">
 						{Array.isArray(executives) && executives.map((m, idx) => (
-							<ExecutiveCard key={idx} name={m.name} role={m.role} imageSrc={m.image} />
+							<div key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
+								<ExecutiveCard name={m.name} role={m.role} imageSrc={m.image} />
+							</div>
 						))}
 					</div>
 				</div>
 
-				<div className="mt-12">
+				<div className="mt-12" data-aos="fade-right">
 					<h3 className="text-white font-poppins font-bold text-xl md:text-2xl">{t('team.advisors.title')}</h3>
 					<p className="mt-4 text-white font-poppins font-light leading-relaxed text-sm md:text-base xl:text-lg">
 						{t('team.advisors.description')}
