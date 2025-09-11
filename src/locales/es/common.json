@@ -85,5 +85,49 @@
         "image": "/assets/services/services5.avif"
       }
     ]
+  },
+  "howItWorks": {
+    "title_line1": "¿Cómo funciona",
+    "title_line2": "Galileo?",
+    "subtitle": "En 3 pasos sencillos",
+    "steps": [
+      {
+        "title": "Descargá la App y registrate",
+        "description": "Es rápido, gratis y fácil. Solo necesitás unos minutos para crear tu cuenta segura en Galileo desde tu teléfono."
+      },
+      {
+        "title": "Depositá tus fondos",
+        "description": "Transferí colones o dólares desde tu banco local, recibí o envía activos digitales de cualquier parte del mundo."
+      },
+      {
+        "title": "Empezá a usar tu dinero",
+        "description": "Pagá tus compras, transferí a quien necesités o cambiá divisas al instante."
+      }
+    ]
+  },
+  "team": {
+    "title_line1": "Nuestro equipo:",
+    "title_line2": "La fuerza detrás de Galileo",
+    "about": {
+      "title": "Quiénes somos",
+      "paragraphs": [
+        "Somos un equipo apasionado de tecnólogos, financieros y emprendedores unidos por una misión común: hacer que el dinero fluya mejor para todos.",
+        "Nuestra experiencia combinada en el sector fintech, blockchain y banca tradicional nos permite construir una plataforma sólida, innovadora y adaptada a las necesidades del mercado actual."
+      ]
+    },
+    "executives": {
+      "title": "Directivos",
+      "items": [
+        { "name": "Max Xiques", "role": "CEO", "image": "/assets/example.png" },
+        { "name": "Alberto Castro", "role": "COO", "image": "/assets/example.png" },
+        { "name": "Jose Andres Barboza", "role": "CTO", "image": "/assets/example.png" },
+        { "name": "Daniel Ureña", "role": "CMO Web3", "image": "/assets/example.png" },
+        { "name": "Minor Paniagua", "role": "CFO", "image": "/assets/example.png" }
+      ]
+    },
+    "advisors": {
+      "title": "Asesores",
+      "description": "Contamos con el respaldo de expertos en regulación financiera, tecnología blockchain y desarrollo de productos fintech, garantizando que Galileo opere con los más altos estándares de seguridad y cumplimiento."
+    }
   }
 } 

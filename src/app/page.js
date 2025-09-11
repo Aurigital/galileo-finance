@@ -7,17 +7,21 @@ import ValueBanner from "@/app/components/ValueBanner";
 import CostaRicaBanner from "@/app/components/CostaRicaBanner";
 import CtaBanner from "@/app/components/CtaBanner";
 import InfiniteCarousel from "@/app/components/InfiniteCarousel";
+import HowItWorks from "@/app/components/HowItWorks";
+import Team from "@/app/components/Team";
 
 export default function Galileo() {
   return (
     <>
-    <div className="flex flex-col min-h-screen bg-[url('/assets/Website.avif')] bg-cover bg-center md:bg-top bg-no-repeat">
-      <Navbar />
+          <Navbar />
+    <div className="flex flex-col min-h-screen bg-[url('/assets/Website.avif')] bg-cover bg-center md:bg-top bg-no-repeat space-y-16 md:space-y-24">
       <Hero />
       <CostaRicaBanner />
       <Features />
-      <InfiniteCarousel />
+      <HowItWorks />
       <ValueBanner />
+      <InfiniteCarousel />
+      <Team />
       <CtaBanner />
     </div>
     <Footer />

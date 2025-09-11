@@ -7,7 +7,7 @@ const CtaBanner = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section className="relative overflow-visible bg-gradient-to-br from-[#3B10D8] to-[#28C0F5]">
+		<section className="relative overflow-visible bg-gradient-to-br from-[#3B10D8] to-[#28C0F5] ">
 			<div className="absolute inset-0 bg-black/5" />
 
 			<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,13 +43,13 @@ const CtaBanner = () => {
 					</div>
 
 					<div className="relative hidden lg:block">
-						<div className="absolute -top-[22rem] -right-20 w-[600px] h-[700px] z-50">
+						<div className="absolute -top-[22rem] right-0 w-[600px] h-[700px]">
 							<Image 
 								src="/assets/CTA.png" 
 								alt="Galileo Phones" 
 								width={500} 
 								height={600}
-								className="drop-shadow-2xl object-contain w-full h-full"
+								className="object-contain w-full h-full"
 							/>
 						</div>
 					</div>

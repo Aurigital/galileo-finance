@@ -8,7 +8,7 @@ const Hero = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section className="py-32">
+		<section className="pt-32">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center">
 					<h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-12 font-poppins">

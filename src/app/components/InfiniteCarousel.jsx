@@ -34,7 +34,7 @@ export default function InfiniteCarousel() {
   };
 
   return (
-    <section className="w-full pb-16 md:pb-24">
+    <section className="w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-10 md:mb-14 font-poppins">
                 {t('services.title_line1')} <br />

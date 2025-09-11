@@ -85,5 +85,49 @@
         "image": "/assets/services/services5.avif"
       }
     ]
+  },
+  "howItWorks": {
+    "title_line1": "How does",
+    "title_line2": "Galileo work?",
+    "subtitle": "In 3 simple steps",
+    "steps": [
+      {
+        "title": "Download the app and sign up",
+        "description": "It's quick, free and easy. You only need a few minutes to create your secure account on Galileo from your phone."
+      },
+      {
+        "title": "Deposit your funds",
+        "description": "Transfer colones or dollars from your local bank, receive or send digital assets from anywhere in the world."
+      },
+      {
+        "title": "Start using your money",
+        "description": "Pay for your purchases, transfer to whoever you need or exchange currencies instantly."
+      }
+    ]
+  },
+  "team": {
+    "title_line1": "Our team:",
+    "title_line2": "The force behind Galileo",
+    "about": {
+      "title": "Who we are",
+      "paragraphs": [
+        "We are a passionate team of technologists, financiers and entrepreneurs united by a common mission: make money flow better for everyone.",
+        "Our combined experience in fintech, blockchain and traditional banking allows us to build a solid, innovative platform adapted to the needs of today's market."
+      ]
+    },
+    "executives": {
+      "title": "Executives",
+      "items": [
+        { "name": "Max Xiques", "role": "CEO", "image": "/assets/example.png" },
+        { "name": "Alberto Castro", "role": "COO", "image": "/assets/example.png" },
+        { "name": "Jose Andres Barboza", "role": "CTO", "image": "/assets/example.png" },
+        { "name": "Daniel Ureña", "role": "CMO Web3", "image": "/assets/example.png" },
+        { "name": "Minor Paniagua", "role": "CFO", "image": "/assets/example.png" }
+      ]
+    },
+    "advisors": {
+      "title": "Advisors",
+      "description": "We have the support of experts in financial regulation, blockchain technology and fintech product development, ensuring Galileo operates to the highest standards of security and compliance."
+    }
   }
 } 
