@@ -33,7 +33,7 @@ const Hero = () => {
 					
 					<div className="mt-8">
 						<Link
-							href="/download"
+							href="#download"
 							className="relative inline-flex text-center rounded-md font-bold font-inter bg-[#3B10D8] px-7 py-3 text-base text-white transition-all duration-300 hover:shadow-[0_12px_24px_-4px_rgba(99,102,241,0.65)]"
 						>
 							{t('cta.download')}

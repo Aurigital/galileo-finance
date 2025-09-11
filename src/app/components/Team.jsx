@@ -30,7 +30,7 @@ export default function Team() {
 	const executives = t('team.executives.items', { returnObjects: true });
 
 	return (
-		<section className="">
+		<section id="team" className="">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-2 font-poppins">
 					{t('team.title_line1')}

@@ -7,7 +7,7 @@ const CtaBanner = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section className="relative overflow-visible bg-gradient-to-br from-[#3B10D8] to-[#28C0F5] ">
+		<section id="download" className="relative overflow-visible bg-gradient-to-br from-[#3B10D8] to-[#28C0F5] ">
 			<div className="absolute inset-0 bg-black/5" />
 
 			<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

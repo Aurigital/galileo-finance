@@ -12,10 +12,10 @@ const Navbar = () => {
 	const { t, i18n } = useTranslation();
 
 	const navigation = [
-		{ name: t('nav.about'), href: '/about' },
-		{ name: t('nav.features'), href: '/features' },
-		{ name: t('nav.team'), href: '/team' },
-		{ name: t('nav.contact'), href: '/contact' },
+		{ name: t('nav.about'), href: '#about' },
+		{ name: t('nav.features'), href: '#features' },
+		{ name: t('nav.team'), href: '#team' },
+		{ name: t('nav.contact'), href: '#contact' },
 	];
 
 	const toggleLanguage = () => {
@@ -68,7 +68,7 @@ const Navbar = () => {
 							{i18n.language === 'en' ? 'EN | ES' : 'ES | EN'}
 						</button>
 						<Link
-							href="/download"
+							href="#download"
               className="relative  inline-flex  text-center rounded-md font-bold font-inter bg-[#3B10D8] px-4 py-2.5 text-base text-white transition-all duration-300 hover:shadow-[0_12px_24px_-4px_rgba(99,102,241,0.65)]"
 
           >
@@ -141,7 +141,7 @@ const Navbar = () => {
 						</button>
 						
 						<Link
-							href="/download"
+							href="#download"
 							onClick={() => setIsMenuOpen(false)}
 							className="block w-full text-center rounded-lg font-bold bg-[#3B10D8] px-6 py-4 text-lg text-white transition-all duration-300 hover:bg-[#3B10D8]/90 hover:shadow-[0_12px_24px_-4px_rgba(59,16,216,0.4)] transform hover:scale-[0.98] active:scale-[0.96]"
 						>

@@ -9,7 +9,7 @@ export default function HowItWorks() {
   const steps = t('howItWorks.steps', { returnObjects: true });
 
   return (
-    <section className="">
+    <section className="xl:pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="overflow-visible xl:h-[550px] flex items-end">
           <div className="flex xl:flex-row gap-0 rounded-3xl w-full border border-white/10 bg-gradient-to-br from-slate-900/50 to-purple-900/30">

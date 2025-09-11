@@ -7,7 +7,7 @@ const CostaRicaBanner = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="px-4 sm:px-6 lg:px-14">
+        <section id="about" className="px-4 sm:px-6 lg:px-14">
             <div className="relative max-w-7xl mx-auto px-8 lg:px-10 bg-gradient-to-tr from-[#28C0F5] to-[#3B10D8] rounded-3xl overflow-hidden md:aspect-[10/4]">
                 <div className="absolute inset-0">
                     <Image

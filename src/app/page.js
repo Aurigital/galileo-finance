@@ -13,7 +13,7 @@ import Team from "@/app/components/Team";
 export default function Galileo() {
   return (
     <>
-          <Navbar />
+    <Navbar />
     <div className="flex flex-col min-h-screen bg-[url('/assets/Website.avif')] bg-cover bg-center md:bg-top bg-no-repeat space-y-16 md:space-y-24">
       <Hero />
       <CostaRicaBanner />
