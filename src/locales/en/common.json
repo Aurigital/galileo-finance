@@ -129,5 +129,13 @@
       "title": "Advisors",
       "description": "We have the support of experts in financial regulation, blockchain technology and fintech product development, ensuring Galileo operates to the highest standards of security and compliance."
     }
+  },
+  "footer": {
+    "community_text": "Join the Galileo community and discover financial freedom without limits, where your finances adapt to you, not the other way around.",
+    "questions": "Got questions? Contact us",
+    "email": "contacto@galileo.finance",
+    "instagram_handle": "galileo_finance",
+    "whatsapp_number": "+506 XXX XXXX",
+    "location": "San José, Costa Rica"
   }
 } 

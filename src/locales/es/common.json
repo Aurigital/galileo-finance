@@ -129,5 +129,13 @@
       "title": "Asesores",
       "description": "Contamos con el respaldo de expertos en regulación financiera, tecnología blockchain y desarrollo de productos fintech, garantizando que Galileo opere con los más altos estándares de seguridad y cumplimiento."
     }
+  },
+  "footer": {
+    "community_text": "Únete a la comunidad Galileo y descubrí la libertad financiera sin límites, donde tus finanzas se adaptan a vos, no al revés.",
+    "questions": "¿Tenés Preguntas? Contáctanos",
+    "email": "contacto@galileo.finance",
+    "instagram_handle": "galileo_finance",
+    "whatsapp_number": "+506 XXX XXXX",
+    "location": "San José, Costa Rica"
   }
 } 
