@@ -6,6 +6,7 @@ import Features from "@/app/components/Features";
 import ValueBanner from "@/app/components/ValueBanner";
 import CostaRicaBanner from "@/app/components/CostaRicaBanner";
 import CtaBanner from "@/app/components/CtaBanner";
+import InfiniteCarousel from "@/app/components/InfiniteCarousel";
 
 export default function Galileo() {
   return (
@@ -15,6 +16,7 @@ export default function Galileo() {
       <Hero />
       <CostaRicaBanner />
       <Features />
+      <InfiniteCarousel />
       <ValueBanner />
       <CtaBanner />
     </div>

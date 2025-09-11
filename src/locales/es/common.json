@@ -54,5 +54,36 @@
     "subtitle": "No esperés más para vivir una forma más fácil, moderna y segura de manejar tu dinero.",
     "cta": "¡Tu futuro financiero empieza hoy!",
     "download": "Descargar de la"
+  },
+  "services": {
+    "title_line1": "Nuestros servicios:",
+    "title_line2": "Innovación al alcance de tu mano",
+    "items": [
+      {
+        "title": "Hacé crecer tus ahorros de forma inteligente",
+        "description": "No somos solo una app más; somos la primera fintech que maneja activos digitales, ofreciéndote una experiencia financiera que sí te entiende.",
+        "image": "/assets/services/services1.avif"
+      },
+      {
+        "title": "La solución completa para tu negocio",
+        "description": "Desde pagar a tus proveedores y gestionar salarios de forma eficiente, hasta soluciones para vender en línea y manejar diferentes monedas para tus transacciones internacionales.",
+        "image": "/assets/services/services2.avif"
+      },
+      {
+        "title": "Cuentas para turistas: Facilitá tu viaje a Costa Rica",
+        "description": "Hacemos tu visita a Costa Rica más sencilla y sin preocupaciones financieras. Si sos turista, podés abrir una cuenta local temporal con nosotros de forma rápida y sin complicaciones.",
+        "image": "/assets/services/services3.avif"
+      },
+      {
+        "title": "Cuentas multidivisa: Control total de tu dinero",
+        "description": "Todas tus cuentas en un solo lugar. Con Galileo, podés tener y usar tus activos digitales para tus gastos diarios, para tus ahorros o para tus transacciones internacionales.",
+        "image": "/assets/services/services4.avif"
+      },
+      {
+        "title": "¡Próximamente Tarjeta Galileo!",
+        "description": "La Tarjeta Galileo te permitirá pagar en cualquier tienda o servicio en Costa Rica, tanto física como en línea, o incluso en el extranjero, utilizando el saldo que tengas en colones, dólares o activos digitales.",
+        "image": "/assets/services/services5.avif"
+      }
+    ]
   }
 } 
