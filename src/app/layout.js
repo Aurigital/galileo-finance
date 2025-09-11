@@ -7,52 +7,117 @@ import "aos/dist/aos.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Galileo Capital",
-  description: "Navigate the volatile world of crypto assets with our secure and compliant platform",
+  metadataBase: new URL("https://galileocapital.io"),
+  title: {
+    default: "Galileo — Fintech en Costa Rica | Tu dinero, más fácil y moderno",
+    template: "%s | Galileo",
+  },
+  description:
+    "Controlá todo tu dinero y activos digitales desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
+  keywords: [
+    "fintech",
+    "Costa Rica",
+    "activos digitales",
+    "cripto",
+    "colones",
+    "dólares",
+    "cuentas multidivisa",
+    "transferencias",
+    "pagos",
+    "cobros",
+    "ahorros",
+    "tarjeta",
+    "negocios",
+    "turistas",
+    "billetera digital",
+  ],
+  authors: [{ name: "Galileo" }],
+  creator: "Galileo",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "https://galileocapital.io/",
+    title: "Galileo — Fintech en Costa Rica | Tu dinero, más fácil y moderno",
+    description:
+      "Controlá todo tu dinero y activos digitales desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
+    siteName: "Galileo",
+    locale: "es_CR",
+    images: [
+      {
+        url: "/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
+        type: "image/png",
+        alt: "Galileo - Fintech en Costa Rica",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Galileo — Fintech en Costa Rica | Tu dinero, más fácil y moderno",
+    description:
+      "Controlá todo tu dinero y activos digitales desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
+    images: ["/android-chrome-512x512.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  applicationName: "Galileo",
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es-CR">
       <head>
-        <meta name="author" content="Galileo Capital" />
-        
-        <meta property="og:title" content="Galileo Capital - Investment and Financial Advisory" />
-        <meta property="og:description" content="Maximize your investments and secure your financial future with personalized professional advisory from Galileo Capital." />
-        <meta property="og:image" content="/src/assets/logo.png" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://galileocapital.io" />
-
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="canonical" href="https://galileocapital.io/" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet"
+        />
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: `
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
           {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Galileo Capital",
+            "name": "Galileo",
             "url": "https://galileocapital.io/",
-            "logo": "https://galileocapital.io/logo.svg",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+506-XXXXXXX",
-              "contactType": "Customer Service",
-              "areaServed": "CR",
-              "availableLanguage": "English"
-            },
+            "logo": "https://galileocapital.io/android-chrome-512x512.png",
             "sameAs": [
               "https://www.instagram.com/galileo.capital/"
-            ]
-          }`
-        }} />
+            ],
+            "areaServed": "CR",
+            "foundingDate": "2024",
+            "foundingLocation": "Costa Rica",
+            "contactPoint": [{
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "availableLanguage": "es"
+            }]
+          }`,
+          }}
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

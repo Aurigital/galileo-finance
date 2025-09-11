@@ -22,21 +22,35 @@ const CtaBanner = () => {
 						<p className="mt-6 sm:text-lg md:text-xl max-w-2xl text-white font-semibold font-inter" data-aos="fade-right">{t('ctaBanner.cta')}</p>
 
 						<div className="mt-6 flex items-center gap-4 flex-col md:flex-row" data-aos="fade-right">
-						   <a href='' className="border border-white/50 rounded-md px-3 py-1.5 gap-2 bg-black text-white font-semibold flex items-center flex-row hover:scale-105 transition-all duration-300">
-								<img src="/assets/google-icon.png" alt="Apple Icon" className="" width={25} height={25} />
-								<span className="flex flex-col text-center">
-									<p className="font-poppins font-light text-xs text-white/50">{t('ctaBanner.download')}</p>
-									<p className="font-poppins font-semibold text-2xl -mt-1">Google Play</p>
-								</span>
-							</a>
+						   <div className="relative group">
+								<a href='#' className="border border-white/50 rounded-md px-3 py-1.5 gap-2 bg-black text-white font-semibold flex items-center flex-row hover:scale-105 transition-all duration-300 cursor-not-allowed opacity-75">
+									<img src="/assets/google-icon.png" alt="Apple Icon" className="" width={25} height={25} />
+									<span className="flex flex-col text-center">
+										<p className="font-poppins font-light text-xs text-white/50">{t('ctaBanner.download')}</p>
+										<p className="font-poppins font-semibold text-2xl -mt-1">Google Play</p>
+									</span>
+								</a>
+								{/* Tooltip */}
+								<div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10">
+									Próximamente
+									<div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+								</div>
+							</div>
 
-							<a href='' className="border border-white/50 rounded-md px-3 py-1.5 gap-2 bg-black text-white font-semibold flex items-center flex-row hover:scale-105 transition-all duration-300">
-								<img src="/assets/apple-icon.png" alt="Apple Icon" className="invert" width={25} height={25} />
-								<span className="flex flex-col text-center">
-									<p className="font-poppins font-light text-xs text-white/50">{t('ctaBanner.download')}</p>
-									<p className="font-poppins font-semibold text-2xl -mt-1">App Store</p>
-								</span>
-							</a>
+							<div className="relative group">
+								<a href='#' className="border border-white/50 rounded-md px-3 py-1.5 gap-2 bg-black text-white font-semibold flex items-center flex-row hover:scale-105 transition-all duration-300 cursor-not-allowed opacity-75">
+									<img src="/assets/apple-icon.png" alt="Apple Icon" className="invert" width={25} height={25} />
+									<span className="flex flex-col text-center">
+										<p className="font-poppins font-light text-xs text-white/50">{t('ctaBanner.download')}</p>
+										<p className="font-poppins font-semibold text-2xl -mt-1">App Store</p>
+									</span>
+								</a>
+								{/* Tooltip */}
+								<div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10">
+									Próximamente
+									<div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+								</div>
+							</div>
 						</div>
 
 						<img src="/assets/CTA.png" alt="Galileo Phones" className="contain mt-10 block lg:hidden justify-self-center" />
