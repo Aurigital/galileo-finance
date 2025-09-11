@@ -9,8 +9,21 @@ import CtaBanner from "@/app/components/CtaBanner";
 import InfiniteCarousel from "@/app/components/InfiniteCarousel";
 import HowItWorks from "@/app/components/HowItWorks";
 import Team from "@/app/components/Team";
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Galileo() {
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      delay: 0,
+    });
+  }, []);
+
   return (
     <>
     <Navbar />
