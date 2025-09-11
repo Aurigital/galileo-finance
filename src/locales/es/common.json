@@ -44,5 +44,15 @@
     "preamble": "No somos solo una app más;",
     "bold": "somos la primera Fintech que maneja activos digitales",
     "postscript": "ofreciéndote una experiencia financiera fluida, segura y que realmente te entiende."
+  },
+  "crBanner": {
+    "title": "Descubrí lo fácil que puede ser manejar tu dinero en Costa Rica",
+    "subtitle": "En Galileo hemos diseñado cada función para que tu experiencia financiera sea fluida, segura y sin complicaciones, resolviendo los desafíos que enfrentás día a día."
+  },
+  "ctaBanner": {
+    "title": "¿Frustrado con trámites bancarios y comisiones ocultas?",
+    "subtitle": "No esperés más para vivir una forma más fácil, moderna y segura de manejar tu dinero.",
+    "cta": "¡Tu futuro financiero empieza hoy!",
+    "download": "Descargar de la"
   }
 } 
