@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -11,10 +11,25 @@ const Navbar = () => {
 	const pathname = usePathname();
 	const { t, i18n } = useTranslation();
 
+	const [rates, setRates] = useState({ compra: null, venta: null });
+
+	useEffect(() => {
+		const fetchRates = async () => {
+			try {
+				const res = await fetch('https://tipodecambio.paginasweb.cr/api');
+				const data = await res.json();
+				setRates({ compra: Number(data.compra), venta: Number(data.venta) });
+			} catch (e) {
+			}
+		};
+		fetchRates();
+		const id = setInterval(fetchRates, 1000 * 60 * 10); 
+		return () => clearInterval(id);
+	}, []);
+
 	const navigation = [
 		{ name: t('nav.about'), href: '#about' },
 		{ name: t('nav.features'), href: '#features' },
-		{ name: t('nav.team'), href: '#team' },
 		{ name: t('nav.contact'), href: '#contact' },
 	];
 
@@ -60,7 +75,19 @@ const Navbar = () => {
 						</div>
 					</div>
 
-					<div className="hidden md:flex items-center space-x-6">
+					<div className="hidden md:flex items-center space-x-8">
+						{/* Rates */}
+						<div className="hidden lg:flex items-center text-white text-sm font-poppins">
+							<div className="pr-4 mr-4 border-r border-white/20">
+								<div className="opacity-80 text-xs font-poppins font-light">{t('rates.buy')}</div>
+								<div className="text-lg font-light leading-tight">{rates.compra ? rates.compra.toFixed(2) : '—'}</div>
+							</div>
+							<div>
+								<div className="opacity-80 text-xs font-poppins font-light">{t('rates.sell')}</div>
+								<div className="text-lg font-light leading-tight">{rates.venta ? rates.venta.toFixed(2) : '—'}</div>
+							</div>
+						</div>
+
 						<button
 							onClick={toggleLanguage}
 							className="text-gray-300 hover:text-white text-sm font-medium"
@@ -69,9 +96,8 @@ const Navbar = () => {
 						</button>
 						<Link
 							href="#download"
-              className="relative  inline-flex  text-center rounded-md font-bold font-inter bg-[#3B10D8] px-4 py-2.5 text-base text-white transition-all duration-300 hover:shadow-[0_12px_24px_-4px_rgba(99,102,241,0.65)]"
-
-          >
+							className="relative inline-flex text-center rounded-md font-bold font-inter bg-[#3B10D8] px-4 py-2.5 text-base text-white transition-all duration-300 hover:shadow-[0_12px_24px_-4px_rgba(99,102,241,0.65)]"
+						>
 							{t('cta.download')}
 						</Link>
 					</div>
@@ -133,7 +159,7 @@ const Navbar = () => {
 					<div className="border-t border-white/10 mx-6"></div>
 
 					<div className="px-6 py-6 space-y-4">
-                    <button
+						<button
 							onClick={toggleLanguage}
 							className="text-gray-300 hover:text-white text-sm font-medium w-full text-center"
 						>
