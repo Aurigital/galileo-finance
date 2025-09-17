@@ -146,10 +146,13 @@
   },
   "footer": {
     "community_text": "Join the Galileo community and discover financial freedom without limits, where your finances adapt to you, not the other way around.",
-    "questions": "Got questions? Contact us",
+    "questions": "Got questions? Contact us.",
     "email": "contacto@galileo.finance",
     "instagram_handle": "galileo_finance",
     "whatsapp_number": "+506 XXX XXXX",
-    "location": "San José, Costa Rica"
+    "location": "San José, Costa Rica",
+    "disclaimer": "WARNING: The public is advised that GIO Capital Groups SA is supervised only in matters of prevention of money laundering, financing of terrorism and financing of the proliferation of weapons of mass destruction, and is subject to binding provisions of the Financial Intelligence Unit of the Costa Rican Institute on Drugs. Therefore, Sugef does not supervise Gio Capital Group SA in financial matters, nor the businesses it offers, nor its security, stability or solvency.",
+    "registry": "Our operation is registered in the National Electronic Payments System (SINPE) and validated by the Central Bank of Costa Rica.",
+    "provider": "Digital assets services are provided by Galileo Capital LLC, a US FINCEN registered company."
   }
 } 
