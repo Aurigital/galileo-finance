@@ -58,7 +58,7 @@ const Footer = () => {
               </Link>
 
               <Link 
-                href="https://wa.me/+506XXXXXXXX"
+                href="https://wa.me/50640015769"
                 className="flex items-center space-x-3 hover:text-cyan-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
