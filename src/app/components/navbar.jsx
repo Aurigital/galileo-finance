@@ -16,12 +16,19 @@ const Navbar = () => {
 	useEffect(() => {
 		const fetchRates = async () => {
 			try {
+				const controller = new AbortController();
+				const timeoutId = setTimeout(() => controller.abort(), 5000);
+				
 				const res = await fetch('https://tipodecambio.paginasweb.cr/api', {
 					mode: 'cors',
 					headers: {
 						'Accept': 'application/json',
-					}
+						'Cache-Control': 'no-cache'
+					},
+					signal: controller.signal
 				});
+				
+				clearTimeout(timeoutId);
 				
 				if (!res.ok) {
 					console.warn('Failed to fetch exchange rates:', res.status);
@@ -30,11 +37,13 @@ const Navbar = () => {
 				
 				const data = await res.json();
 				
-				if (data.compra && data.venta) {
+				if (data && data.compra && data.venta && !isNaN(data.compra) && !isNaN(data.venta)) {
 					setRates({ compra: Number(data.compra), venta: Number(data.venta) });
 				}
 			} catch (e) {
-				console.warn('Error fetching exchange rates:', e);
+				if (e.name !== 'AbortError') {
+					console.warn('Error fetching exchange rates:', e);
+				}
 			}
 		};
 		
