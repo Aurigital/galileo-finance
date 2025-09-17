@@ -14,8 +14,8 @@ if (!i18n.isInitialized) {
 		.use(initReactI18next)
 		.init({
 			resources,
-			lng: 'en',
-			fallbackLng: 'en',
+			lng: 'es',
+			fallbackLng: 'es',
 			supportedLngs: ['en', 'es'],
 			interpolation: { escapeValue: false },
 		});

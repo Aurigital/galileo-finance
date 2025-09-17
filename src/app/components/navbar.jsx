@@ -75,7 +75,7 @@ const Navbar = () => {
 						</div>
 					</div>
 
-					<div className="hidden md:flex items-center space-x-8">
+					<div className="hidden md:flex items-center space-x-6">
 						{/* Rates */}
 						<div className="hidden lg:flex items-center text-white text-sm font-poppins">
 							<div className="pr-4 mr-4 border-r border-white/20">
@@ -94,6 +94,14 @@ const Navbar = () => {
 						>
 							{i18n.language === 'en' ? 'EN | ES' : 'ES | EN'}
 						</button>
+						<Link
+							href="https://app.galileo.finance/login"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="relative inline-flex text-center rounded-md font-medium font-inter border border-white/20 px-4 py-2.5 text-sm text-white transition-all duration-300 hover:bg-white/5 hover:border-white/40"
+						>
+							{t('cta.login')}
+						</Link>
 						<Link
 							href="#download"
 							className="relative inline-flex text-center rounded-md font-bold font-inter bg-[#3B10D8] px-4 py-2.5 text-base text-white transition-all duration-300 hover:shadow-[0_12px_24px_-4px_rgba(99,102,241,0.65)]"
@@ -165,6 +173,16 @@ const Navbar = () => {
 						>
 							{i18n.language === 'en' ? 'EN | ES' : 'ES | EN'}
 						</button>
+						
+						<Link
+							href="https://app.galileo.finance/login"
+							target="_blank"
+							rel="noopener noreferrer"
+							onClick={() => setIsMenuOpen(false)}
+							className="block w-full text-center rounded-lg font-medium border border-white/20 px-6 py-3 text-base text-white transition-all duration-300 hover:bg-white/5 hover:border-white/40"
+						>
+							{t('cta.login')}
+						</Link>
 						
 						<Link
 							href="#download"
