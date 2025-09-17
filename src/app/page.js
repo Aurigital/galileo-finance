@@ -9,6 +9,7 @@ import CtaBanner from "@/app/components/CtaBanner";
 import InfiniteCarousel from "@/app/components/InfiniteCarousel";
 import HowItWorks from "@/app/components/HowItWorks";
 import Team from "@/app/components/Team";
+import Audience from "@/app/components/Audience";
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -32,9 +33,9 @@ export default function Galileo() {
       <CostaRicaBanner />
       <Features />
       <HowItWorks />
+      <Audience />
       <ValueBanner />
       <InfiniteCarousel />
-      <Team />
       <CtaBanner />
     </div>
     <Footer />

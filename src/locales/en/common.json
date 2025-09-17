@@ -130,6 +130,20 @@
       "description": "We have the support of experts in financial regulation, blockchain technology and fintech product development, ensuring Galileo operates to the highest standards of security and compliance."
     }
   },
+  "audience": {
+    "title_line1": "Who is Galileo for?",
+    "title_line2": "For you!",
+    "items": [
+      {"title": "People seeking simplicity", "description": "If you want an easy and modern way to manage your daily expenses, pay bills and grow your savings."},
+      {"title": "Entrepreneurs and Freelancers", "description": "If you receive payments from abroad in dollars or digital assets, or need an efficient way to manage your growing business finances, simplifying your collections and payments."},
+      {"title": "Local businesses", "description": "If you want to offer your clients new payment options, including digital assets, and simplify your day‑to‑day financial management."}
+    ],
+    "images": [
+      {"src": "/assets/a1.avif", "alt": "Group of young people chatting"},
+      {"src": "/assets/a2.avif", "alt": "Couple chatting at a café"},
+      {"src": "/assets/a3.avif", "alt": "Entrepreneur in her workshop"}
+    ]
+  },
   "footer": {
     "community_text": "Join the Galileo community and discover financial freedom without limits, where your finances adapt to you, not the other way around.",
     "questions": "Got questions? Contact us",
