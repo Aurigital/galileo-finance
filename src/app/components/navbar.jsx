@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -11,36 +11,6 @@ const Navbar = () => {
 	const pathname = usePathname();
 	const { t, i18n } = useTranslation();
 
-	const [rates, setRates] = useState({ compra: null, venta: null });
-
-	useEffect(() => {
-		const fetchRates = async () => {
-			try {
-				const res = await fetch('/api/exchange-rates', {
-					headers: {
-						'Accept': 'application/json'
-					}
-				});
-				
-				if (!res.ok) {
-					console.warn('Failed to fetch exchange rates:', res.status);
-					return;
-				}
-				
-				const data = await res.json();
-				
-				if (data && data.compra && data.venta && !isNaN(data.compra) && !isNaN(data.venta)) {
-					setRates({ compra: Number(data.compra), venta: Number(data.venta) });
-				}
-			} catch (e) {
-				console.warn('Error fetching exchange rates:', e);
-			}
-		};
-		
-		fetchRates();
-		const id = setInterval(fetchRates, 1000 * 60 * 5); 
-		return () => clearInterval(id);
-	}, []);
 
 	const navigation = [
 		{ name: t('nav.about'), href: '#about' },
@@ -91,17 +61,6 @@ const Navbar = () => {
 					</div>
 
 					<div className="hidden md:flex items-center space-x-6">
-						{/* Rates */}
-						<div className="hidden lg:flex items-center text-white text-sm font-poppins">
-							<div className="pr-4 mr-4 border-r border-white/20">
-								<div className="opacity-80 text-xs font-poppins font-light">{t('rates.buy')}</div>
-								<div className="text-lg font-light leading-tight">{rates.compra ? rates.compra.toFixed(2) : '—'}</div>
-							</div>
-							<div>
-								<div className="opacity-80 text-xs font-poppins font-light">{t('rates.sell')}</div>
-								<div className="text-lg font-light leading-tight">{rates.venta ? rates.venta.toFixed(2) : '—'}</div>
-							</div>
-						</div>
 
 						<button
 							onClick={toggleLanguage}
