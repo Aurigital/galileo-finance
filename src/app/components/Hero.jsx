@@ -31,7 +31,15 @@ const Hero = () => {
 					<span className="font-bold">{t('hero.subtitle_line1')}</span> {t('hero.subtitle')}
 					</p>
 					
-					<div className="mt-8" data-aos="fade-up">
+					<div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up">
+						<Link
+							href="https://app.galileo.finance/register"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="relative inline-flex text-center rounded-md font-medium font-inter border-2 border-white/30 px-7 py-3 text-base text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
+						>
+							{t('cta.register')}
+						</Link>
 						<Link
 							href="#download"
 							className="relative inline-flex text-center rounded-md font-bold font-inter bg-[#3B10D8] px-7 py-3 text-base text-white transition-all duration-300 hover:shadow-[0_12px_24px_-4px_rgba(99,102,241,0.65)]"

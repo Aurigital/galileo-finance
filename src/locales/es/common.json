@@ -7,7 +7,8 @@
   },
   "cta": {
     "download": "Descargá la App",
-    "login": "Ingresar al Portal"
+    "login": "Ingresar al Portal",
+    "register": "Crea tu cuenta"
   },
   "hero": {
     "title_line1": "Tu dinero, más",
