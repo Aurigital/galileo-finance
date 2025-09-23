@@ -17,13 +17,14 @@ const Hero = () => {
 						<span>{t('hero.title_line2')}</span>
 					</h1>
 					
-					<div className="flex justify-center mb-12" data-aos="fade-up">
+					<div className="flex justify-center mb-4" data-aos="fade-up">
 						<Image
 							src="/assets/hero-phones.avif"
 							alt="App preview phones"
-							width={560}
-							height={480}
+							width={700}
+							height={600}
 							priority
+							className="max-w-full h-auto"
 						/>
 					</div>
 					
