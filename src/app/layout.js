@@ -3,6 +3,8 @@ import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import FacebookPixel from "./components/FacebookPixel";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -119,7 +121,15 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
+        {process.env.NEXT_PUBLIC_FB_PIXEL_ID && (
+          <FacebookPixel pixelId={process.env.NEXT_PUBLIC_FB_PIXEL_ID} />
+        )}
+        {children}
+      </body>
     </html>
   );
 }

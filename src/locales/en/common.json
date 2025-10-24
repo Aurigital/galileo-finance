@@ -64,7 +64,7 @@
       {
         "title": "Grow your savings intelligently",
         "description": "We're not just another app; we're the first fintech managing digital assets, offering you a financial experience that truly understands you.",
-        "image": "/assets/services/services1.avif"
+        "image": "/assets/services/services1.png"
       },
       {
         "title": "The complete solution for your business",
@@ -74,7 +74,7 @@
       {
         "title": "Accounts for tourists: Make your trip to Costa Rica easier",
         "description": "We make your visit to Costa Rica simpler and worry‑free. If you're a tourist, you can open a temporary local account with us quickly and without complications.",
-        "image": "/assets/services/services3.avif"
+        "image": "/assets/services/services3.png"
       },
       {
         "title": "Multi‑currency accounts: Total control of your money",
@@ -84,7 +84,7 @@
       {
         "title": "Coming soon: Galileo Card!",
         "description": "The Galileo Card will let you pay at any store or service in Costa Rica, in person or online, and even abroad, using balances in colones, dollars, or digital assets.",
-        "image": "/assets/services/services5.avif"
+        "image": "/assets/services/services5.png"
       }
     ]
   },

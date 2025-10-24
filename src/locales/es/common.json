@@ -64,7 +64,7 @@
       {
         "title": "Hacé crecer tus ahorros de forma inteligente",
         "description": "No somos solo una app más; somos la primera fintech que maneja activos digitales, ofreciéndote una experiencia financiera que sí te entiende.",
-        "image": "/assets/services/services1.avif"
+        "image": "/assets/services/services1.png"
       },
       {
         "title": "La solución completa para tu negocio",
@@ -74,7 +74,7 @@
       {
         "title": "Cuentas para turistas: Facilitá tu viaje a Costa Rica",
         "description": "Hacemos tu visita a Costa Rica más sencilla y sin preocupaciones financieras. Si sos turista, podés abrir una cuenta local temporal con nosotros de forma rápida y sin complicaciones.",
-        "image": "/assets/services/services3.avif"
+        "image": "/assets/services/services3.png"
       },
       {
         "title": "Cuentas multidivisa: Control total de tu dinero",
@@ -84,7 +84,7 @@
       {
         "title": "¡Próximamente Tarjeta Galileo!",
         "description": "La Tarjeta Galileo te permitirá pagar en cualquier tienda o servicio en Costa Rica, tanto física como en línea, o incluso en el extranjero, utilizando el saldo que tengas en colones, dólares o activos digitales.",
-        "image": "/assets/services/services5.avif"
+        "image": "/assets/services/services5.png"
       }
     ]
   },
