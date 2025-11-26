@@ -10,6 +10,7 @@ import InfiniteCarousel from "@/app/components/InfiniteCarousel";
 import HowItWorks from "@/app/components/HowItWorks";
 import Team from "@/app/components/Team";
 import Audience from "@/app/components/Audience";
+import FAQ from "@/app/components/FAQ";
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -34,6 +35,7 @@ export default function Galileo() {
       <Features />
       <HowItWorks />
       <Audience />
+      <FAQ />
       <ValueBanner />
       <InfiniteCarousel />
       <CtaBanner />

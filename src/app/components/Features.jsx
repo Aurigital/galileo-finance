@@ -4,7 +4,7 @@ import '../../lib/i18n';
 
 const FeatureCard = ({ title, description, emphasis = false }) => {
 	return (
-		<div className={`relative rounded-2xl bg-black/30 backdrop-blur-sm p-6 md:p-8 transition-transform duration-200 ${emphasis ? '' : ''}`}>
+		<div className={`relative h-full rounded-2xl bg-black/30 backdrop-blur-sm p-6 md:p-8 transition-transform duration-200 ${emphasis ? '' : ''}`}>
 			<div className="">
 				<h3 className="text-white text-xl md:text-2xl lg:text-3xl font-poppins font-bold tracking-tight border-l-4 border-[#00FFFF] pl-4">{title}</h3>
 				<p className="mt-3 text-white font-poppins font-light text-sm md:text-base lg:text-lg leading-relaxed">{description}</p>

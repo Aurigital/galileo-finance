@@ -96,6 +96,18 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SXPP4SBGK"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-4SXPP4SBGK');
+            `,
+          }}
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

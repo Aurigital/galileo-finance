@@ -21,23 +21,23 @@
     "items": [
       {
         "title": "Todo tu dinero en un solo lugar",
-        "description": "Colones, dólares y cripto en una sola app. Cambiá tu dinero tradicional a activos digitales al instante."
+        "description": "Manejá colones, dólares y activos digitales desde una sola app moderna y poderosa. Cambiá entre FIAT y cripto al instante, con total transparencia en tasas y sin sorpresas."
       },
       {
         "title": "Enviá y recibí dinero al instante",
-        "description": "Realizá transferencias de dinero a otros usuarios de Galileo, a cualquier banco en Costa Rica."
+        "description": "Transferí en segundos a usuarios Galileo o a cualquier banco en Costa Rica. Pagale a un amigo, proveedor o recibí tu salario con la agilidad que necesitás en la vida tica."
       },
       {
         "title": "Pagá y cobrá sin estrés",
-        "description": "Colones, dólares y cripto en una sola app. Cambiá tu dinero tradicional a activos digitales al instante."
+        "description": "Cobrale a clientes locales o turistas desde un solo punto de venta, aceptando colones, dólares o cripto. Simplificá tus cobros y mantené tu negocio siempre en movimiento."
       },
       {
         "title": "Hacé crecer tu dinero",
-        "description": "Colones, dólares y cripto en una sola app. Cambiá tu dinero tradicional a activos digitales al instante."
+        "description": "Hacé que tus ahorros generen rendimiento real con activos digitales, sin bloqueos innecesarios. Tenés liquidez cuando la necesitás y ganancias que superan a la banca tradicional."
       },
       {
-        "title": "Herramientas para tu vida y tu negocio tico",
-        "description": "Colones, dólares y cripto en una sola app. Cambiá tu dinero tradicional a activos digitales al instante."
+        "title": "Herramientas para tu vida moderna y tu negocio tico",
+        "description": "Ya seas freelancer, emprendedor o comercio establecido, Galileo te da soluciones hechas a tu medida. Nuestras herramientas se adaptan a la economía digital y a las necesidades reales de Costa Rica."
       }
     ]
   },
@@ -157,5 +157,332 @@
     "registry": "Nuestra operación se encuentra registrada en el Sistema Nacional de Pagos Electrónicos (SINPE) y validada por el Banco Central de Costa Rica.",
     "provider": "Digital assets services are provided by Galileo Capital LLC, a US FINCEN registered company."
   },
-  "rates": {"buy": "Compra", "sell": "Venta"}
+  "rates": {"buy": "Compra", "sell": "Venta"},
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Encontrá respuestas rápidas a las preguntas más comunes sobre Galileo",
+    "categories": [
+      {
+        "title": "Apertura de cuenta",
+        "items": [
+          {
+            "question": "¿Qué necesito para abrir una cuenta?",
+            "answer": "Necesitas tu identificación vigente (cédula o pasaporte), y completar el KYC."
+          },
+          {
+            "question": "¿Cuánto tarda en aprobarse mi cuenta?",
+            "answer": "La aprobación puede tardar entre minutos y un máximo de 24 horas, dependiendo de la verificación."
+          },
+          {
+            "question": "¿Puedo abrir una cuenta si vivo fuera de Costa Rica?",
+            "answer": "Sí, puedes abrir una cuenta siempre que completes la verificación de identidad y contar con un arraigo en el país."
+          },
+          {
+            "question": "¿Puedo tener una cuenta personal y una empresarial?",
+            "answer": "Sí, puedes tener ambas, siempre que cada una cumpla con los requisitos correspondientes."
+          },
+          {
+            "question": "¿Puedo abrir una cuenta si soy extranjero?",
+            "answer": "Sí, solo necesitas un pasaporte válido y completar el proceso de verificación (KYC)."
+          }
+        ]
+      },
+      {
+        "title": "Acceso y recuperación de usuario",
+        "items": [
+          {
+            "question": "¿Cómo recupero mi usuario si lo olvidé?",
+            "answer": "Puedes recuperarlo usando tu correo o desde la opción 'Recuperar usuario'."
+          },
+          {
+            "question": "¿Cómo recupero mi contraseña?",
+            "answer": "Selecciona 'Olvidé mi contraseña' y sigue los pasos enviados al correo."
+          },
+          {
+            "question": "¿Cómo cambio mi contraseña?",
+            "answer": "Selecciona 'Olvidé mi contraseña' y sigue los pasos enviados al correo."
+          },
+          {
+            "question": "Perdí mi celular, ¿cómo ingreso?",
+            "answer": "Debes contactar a soporte."
+          },
+          {
+            "question": "¿Qué hago si cambié de número de teléfono?",
+            "answer": "Actualiza tu número en la sección de perfil o contacta soporte si no puedes iniciar sesión."
+          },
+          {
+            "question": "¿Por qué se bloqueó mi cuenta?",
+            "answer": "Por intentos fallidos, sospecha de actividad inusual o verificación pendiente. Si tenes alguna duda contactar soporte."
+          }
+        ]
+      },
+      {
+        "title": "Verificación de identidad (KYC)",
+        "items": [
+          {
+            "question": "¿Por qué debo verificar mi identidad?",
+            "answer": "La verificación de identidad es un requisito legal en Costa Rica para todas las entidades que realizan actividades financieras y de transferencias de fondos. Galileo está inscrita ante SUGEF como sujeto obligado bajo la Ley 7786, la cual exige que implementemos controles de conocimiento del cliente (KYC) para prevenir legitimación de capitales y financiamiento al terrorismo."
+          },
+          {
+            "question": "¿Qué documentos se aceptan?",
+            "answer": "Cédula costarricense o pasaporte vigente o permiso de residencia DIMEX, NITE."
+          },
+          {
+            "question": "¿Qué pasa si rechazo la toma de selfie?",
+            "answer": "No podrás completar la verificación ni usar todas las funciones de la plataforma."
+          },
+          {
+            "question": "¿Qué pasa si me rechazan el KYC?",
+            "answer": "Contactar a soporte."
+          }
+        ]
+      },
+      {
+        "title": "Fondos: depósitos, retiros, saldos",
+        "items": [
+          {
+            "question": "¿Cómo depositar dinero?",
+            "answer": "Puedes depositar mediante transferencia bancaria y deposito de activos digitales."
+          },
+          {
+            "question": "¿Cómo retiro mi dinero?",
+            "answer": "Desde la sección 'Retiros', selecciona tu cuenta bancaria y el monto."
+          },
+          {
+            "question": "¿Cuánto tarda un retiro?",
+            "answer": "Generalmente en minutos."
+          },
+          {
+            "question": "¿Puedo tener colones, dólares y cripto al mismo tiempo?",
+            "answer": "Sí, puedes manejar balances múltiples simultáneamente."
+          }
+        ]
+      },
+      {
+        "title": "Transferencias y pagos",
+        "items": [
+          {
+            "question": "¿Puedo transferir a cualquier banco en Costa Rica?",
+            "answer": "Sí, mediante transferencia bancaria."
+          },
+          {
+            "question": "¿Puedo recibir transferencias internacionales?",
+            "answer": "Para realizar una transferencia internacional debes contactar a soporte."
+          },
+          {
+            "question": "¿Qué comisiones aplican?",
+            "answer": "Las comisiones se muestran antes de confirmar cada operación."
+          },
+          {
+            "question": "¿Puedo programar pagos automáticos?",
+            "answer": "Disponible proximamente."
+          },
+          {
+            "question": "¿Qué hago si una transferencia queda pendiente?",
+            "answer": "Verifica tu conexión y contacto soporte si tarda más de lo usual."
+          }
+        ]
+      },
+      {
+        "title": "Activos digitales",
+        "items": [
+          {
+            "question": "¿Qué activos digitales puedo usar?",
+            "answer": "Las principales stablecoins soportadas en la plataforma (USDT, USDC)."
+          },
+          {
+            "question": "¿Puedo enviar cripto a una billetera externa?",
+            "answer": "Sí, siempre que uses la red correcta."
+          },
+          {
+            "question": "¿Qué hago si deposite cripto a una red equivocada?",
+            "answer": "En la mayoría de casos no es recuperable. Contacta el soporte, pero puede no haber solución."
+          }
+        ]
+      },
+      {
+        "title": "Seguridad",
+        "items": [
+          {
+            "question": "¿Cómo protegen mi dinero?",
+            "answer": "Estamos afiliados al Banco central de Costa Rica. Usamos cifrado bancario, monitoreo constante y sistemas antifraude."
+          },
+          {
+            "question": "¿Qué hago si veo un movimiento que no reconozco?",
+            "answer": "Repórtalo inmediatamente al soporte."
+          },
+          {
+            "question": "¿Cómo bloqueo mi cuenta?",
+            "answer": "Desde la app en la sección de seguridad o solicitándolo a soporte."
+          },
+          {
+            "question": "¿Cómo activo la autenticación de dos factores?",
+            "answer": "En la configuración de seguridad puedes habilitar 2FA. Una vez que crees la cuenta te ayudamos paso a paso."
+          },
+          {
+            "question": "¿Guarda Galileo mis claves privadas?",
+            "answer": "No, utilizamos infraestructura de custodia segura sin exponer claves privadas."
+          }
+        ]
+      },
+      {
+        "title": "Tarjetas",
+        "items": [
+          {
+            "question": "¿Ofrecen tarjeta física o virtual?",
+            "answer": "Nuestro objetivo es ponerla a disposición de nuestros usuarios durante el año 2026. Inscribite en nuestra lista de espera para ser de los primeros en obtenerla."
+          }
+        ]
+      },
+      {
+        "title": "Límites de uso",
+        "items": [
+          {
+            "question": "¿Qué límites tengo al retirar o enviar?",
+            "answer": "Depende del nivel de verificación KYC y su evidencia de ingresos, así como del nivel de ingresos comprobados."
+          },
+          {
+            "question": "¿Puedo aumentar mis límites?",
+            "answer": "Sí, completando una verificación adicional."
+          }
+        ]
+      },
+      {
+        "title": "Cuenta empresarial",
+        "items": [
+          {
+            "question": "¿Puedo recibir pagos de clientes?",
+            "answer": "Sí, puedes recibir pagos bancarios y activos digitales."
+          },
+          {
+            "question": "¿Puedo separar balances personales y empresariales?",
+            "answer": "Sí, cada cuenta es independiente."
+          },
+          {
+            "question": "¿Qué necesito para abrir una cuenta empresarial?",
+            "answer": "Personería jurídica, identificación del representante y documentos legales adicionales."
+          }
+        ]
+      },
+      {
+        "title": "Soporte",
+        "items": [
+          {
+            "question": "¿Cómo contacto al soporte?",
+            "answer": "Desde la app o por WhatsApp al +506 4001-5769."
+          },
+          {
+            "question": "¿Cuál es el horario de atención?",
+            "answer": "Atención en horario comercial de 8:00 am a 5:00 pm, con soporte extendido en casos urgentes."
+          },
+          {
+            "question": "¿En qué casos debo contactar soporte?",
+            "answer": "Problemas de acceso, movimientos sospechosos, fallos en retiros o verificación."
+          }
+        ]
+      },
+      {
+        "title": "Cuenta, perfil y configuración",
+        "items": [
+          {
+            "question": "¿Cómo cambio mi correo?",
+            "answer": "Contactar con soporte."
+          },
+          {
+            "question": "¿Puedo ingresar desde diferentes dispositivos?",
+            "answer": "Sí, puedes descargar la app en múltiples dispositivos."
+          }
+        ]
+      },
+      {
+        "title": "Legal y cumplimiento",
+        "items": [
+          {
+            "question": "¿Galileo está regulado?",
+            "answer": "Sí. Galileo opera mediante entidad inscrita ante SUGEF como sujeto obligado según el Artículo 15 de la Ley 7786, cumpliendo con las regulaciones sobre administración de recursos financieros y transferencias de fondos. Esta inscripción fue aprobada el 17 de octubre de 2022, lo que confirma que cumplimos con los requisitos exigidos por el marco regulatorio costarricense en materia de prevención de legitimación de capitales y financiamiento al terrorismo."
+          },
+          {
+            "question": "¿Qué es AML/KYC?",
+            "answer": "AML (Anti-Money Laundering) se refiere a las medidas y controles para prevenir legitimación de capitales y financiamiento al terrorismo, conforme a la Ley 7786 en Costa Rica.\n\nKYC (Know Your Customer) consiste en verificar la identidad de los usuarios, confirmar quiénes son y validar la procedencia de sus fondos.\n\nEn nuestro caso, como entidad inscrita ante SUGEF bajo la Ley 7786, estamos obligados a aplicar procesos de verificación y monitoreo de usuarios y transacciones para evitar actividades ilícitas."
+          }
+        ]
+      },
+      {
+        "title": "Problemas comunes",
+        "items": [
+          {
+            "question": "El correo de verificación no llega",
+            "answer": "Revisa spam o reintentar o contactar soporte."
+          },
+          {
+            "question": "No puedo tomar mi selfie",
+            "answer": "Asegúrate de tener buena iluminación y permitir acceso a la cámara."
+          }
+        ]
+      },
+      {
+        "title": "Seguridad adicional",
+        "items": [
+          {
+            "question": "¿Qué tan segura es la información y el dinero en la aplicación?",
+            "answer": "Usamos estándares bancarios, cifrado avanzado y monitoreo contra accesos no autorizados."
+          },
+          {
+            "question": "¿Existen costos de mantenimiento de cuenta?",
+            "answer": "No, no tenemos costos ocultos. Cualquier tarifa será informada al usuario."
+          }
+        ]
+      },
+      {
+        "title": "Criptomonedas: Conceptos básicos",
+        "items": [
+          {
+            "question": "¿Qué es una criptomoneda?",
+            "answer": "Es una moneda digital o virtual que está asegurada por criptografía. Es descentralizada, es decir, no está controlada por ningún banco o gobierno."
+          },
+          {
+            "question": "¿Qué es la tecnología Blockchain (cadena de bloques)?",
+            "answer": "Es un registro digital distribuido e inmutable que almacena las transacciones en \"bloques\" enlazados. Es la tecnología base de la mayoría de las criptomonedas."
+          },
+          {
+            "question": "¿Cuál fue la primera criptomoneda y la más conocida?",
+            "answer": "Bitcoin (BTC), creada en 2009."
+          },
+          {
+            "question": "¿Qué es una \"altcoin\"?",
+            "answer": "Es cualquier criptomoneda que no sea Bitcoin. El ejemplo más famoso es Ethereum (ETH)."
+          },
+          {
+            "question": "¿Qué es una billetera (wallet) de criptomonedas?",
+            "answer": "Es un software o dispositivo físico que te permite almacenar tus claves privadas para acceder y gestionar tus criptomonedas."
+          },
+          {
+            "question": "¿Qué son las Stablecoins (monedas estables)?",
+            "answer": "Son un tipo de criptomoneda cuyo valor está vinculado a un activo estable, como el dólar estadounidense (USD). Su objetivo es ofrecer la estabilidad del dinero tradicional con la flexibilidad de las criptomonedas. Un ejemplo popular es USDT (Tether)."
+          },
+          {
+            "question": "¿Qué es una empresa Fintech?",
+            "answer": "Una Fintech como Galileo usa la tecnología para ofrecer servicios financieros de forma más fácil y moderna (pagos digitales, billeteras, etc.). Nuestro valor agregado es que brindamos estos servicios directamente al cliente."
+          },
+          {
+            "question": "¿Qué significa que una criptomoneda es \"volátil\"?",
+            "answer": "Significa que su precio puede subir o bajar de forma muy rápida y significativa en cortos períodos, lo que implica un alto riesgo."
+          },
+          {
+            "question": "¿Qué significa elegir la \"Red\" al enviar criptomonedas (como USDT)?",
+            "answer": "La \"Red\" es la carretera digital por la que viaja tu criptomoneda. Es absolutamente crucial que la red de envío y la red de recepción sean la misma (ej. si envías por TRON, el destino debe aceptar TRON). Si no coinciden:\n\n1. Los fondos pueden perderse permanentemente si la red de destino no existe en la plataforma.\n2. En otros casos, pueden requerirse procesos de recuperación largos y costosos, o el pago de comisiones adicionales.\n\nPor eso, siempre se debe verificar la red antes de enviar."
+          }
+        ]
+      },
+      {
+        "title": "Conversión instantánea",
+        "items": [
+          {
+            "question": "¿Cómo funciona la conversión instantánea en Galileo?",
+            "answer": "La gran ventaja de usar Galileo es la velocidad y la facilidad para manejar tu dinero. Olvídate de largos procesos de transferencia. Con un solo clic, puedes convertir tus criptomonedas a colones o dólares (USD), y tener esos fondos inmediatamente disponibles en tu cuenta IBAN asociada a Galileo, listos para usar."
+          }
+        ]
+      }
+    ]
+  }
 } 
