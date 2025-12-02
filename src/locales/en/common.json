@@ -21,7 +21,7 @@
     "items": [
       {
         "title": "All your money in one place",
-        "description": "Manage colones, dollars and digital assets from a single modern and powerful app. Switch between FIAT and crypto instantly, with complete rate transparency and no surprises."
+        "description": "Manage colones, dollars and digital assets from a single modern and powerful app. Switch between FIAT and digital assets instantly, with complete rate transparency and no surprises."
       },
       {
         "title": "Send and receive money instantly",
@@ -29,7 +29,7 @@
       },
       {
         "title": "Pay and get paid stress‑free",
-        "description": "Collect from local customers or tourists from a single point of sale, accepting colones, dollars or crypto. Simplify your collections and keep your business always moving."
+        "description": "Collect from local customers or tourists from a single point of sale, accepting colones, dollars or digital assets. Simplify your collections and keep your business always moving."
       },
       {
         "title": "Grow your money",
@@ -253,7 +253,7 @@
             "answer": "Generally in minutes."
           },
           {
-            "question": "Can I have colones, dollars and crypto at the same time?",
+            "question": "Can I have colones, dollars and digital assets at the same time?",
             "answer": "Yes, you can manage multiple balances simultaneously."
           }
         ]
@@ -291,11 +291,11 @@
             "answer": "The main stablecoins supported on the platform (USDT, USDC)."
           },
           {
-            "question": "Can I send crypto to an external wallet?",
+            "question": "Can I send digital assets to an external wallet?",
             "answer": "Yes, as long as you use the correct network."
           },
           {
-            "question": "What do I do if I deposited crypto to the wrong network?",
+            "question": "What do I do if I deposited digital assets to the wrong network?",
             "answer": "In most cases it's not recoverable. Contact support, but there may be no solution."
           }
         ]
@@ -434,43 +434,43 @@
         ]
       },
       {
-        "title": "Cryptocurrencies: Basic concepts",
+        "title": "Digital assets: Basic concepts",
         "items": [
           {
-            "question": "What is a cryptocurrency?",
+            "question": "What is a digital asset?",
             "answer": "It's a digital or virtual currency secured by cryptography. It's decentralized, meaning it's not controlled by any bank or government."
           },
           {
             "question": "What is Blockchain technology?",
-            "answer": "It's a distributed and immutable digital ledger that stores transactions in linked \"blocks\". It's the base technology for most cryptocurrencies."
+            "answer": "It's a distributed and immutable digital ledger that stores transactions in linked \"blocks\". It's the base technology for most digital assets."
           },
           {
-            "question": "What was the first and most well-known cryptocurrency?",
+            "question": "What was the first and most well-known digital asset?",
             "answer": "Bitcoin (BTC), created in 2009."
           },
           {
             "question": "What is an \"altcoin\"?",
-            "answer": "It's any cryptocurrency other than Bitcoin. The most famous example is Ethereum (ETH)."
+            "answer": "It's any digital asset other than Bitcoin. The most famous example is Ethereum (ETH)."
           },
           {
-            "question": "What is a cryptocurrency wallet?",
-            "answer": "It's software or a physical device that allows you to store your private keys to access and manage your cryptocurrencies."
+            "question": "What is a digital asset wallet?",
+            "answer": "It's software or a physical device that allows you to store your private keys to access and manage your digital assets."
           },
           {
             "question": "What are Stablecoins?",
-            "answer": "They're a type of cryptocurrency whose value is pegged to a stable asset, like the US dollar (USD). Their goal is to offer the stability of traditional money with the flexibility of cryptocurrencies. A popular example is USDT (Tether)."
+            "answer": "They're a type of digital asset whose value is pegged to a stable asset, like the US dollar (USD). Their goal is to offer the stability of traditional money with the flexibility of digital assets. A popular example is USDT (Tether)."
           },
           {
             "question": "What is a Fintech company?",
             "answer": "A Fintech like Galileo uses technology to offer financial services more easily and modernly (digital payments, wallets, etc.). Our added value is that we provide these services directly to the customer."
           },
           {
-            "question": "What does it mean that a cryptocurrency is \"volatile\"?",
+            "question": "What does it mean that a digital asset is \"volatile\"?",
             "answer": "It means its price can rise or fall very quickly and significantly in short periods, which implies high risk."
           },
           {
-            "question": "What does choosing the \"Network\" mean when sending cryptocurrencies (like USDT)?",
-            "answer": "The \"Network\" is the digital highway your cryptocurrency travels on. It's absolutely crucial that the sending network and receiving network are the same (e.g., if you send via TRON, the destination must accept TRON). If they don't match:\n\n1. Funds can be permanently lost if the destination network doesn't exist on the platform.\n2. In other cases, long and costly recovery processes may be required, or payment of additional fees.\n\nThat's why you should always verify the network before sending."
+            "question": "What does choosing the \"Network\" mean when sending digital assets (like USDT)?",
+            "answer": "The \"Network\" is the digital highway your digital asset travels on. It's absolutely crucial that the sending network and receiving network are the same (e.g., if you send via TRON, the destination must accept TRON). If they don't match:\n\n1. Funds can be permanently lost if the destination network doesn't exist on the platform.\n2. In other cases, long and costly recovery processes may be required, or payment of additional fees.\n\nThat's why you should always verify the network before sending."
           }
         ]
       },
@@ -479,7 +479,7 @@
         "items": [
           {
             "question": "How does instant conversion work in Galileo?",
-            "answer": "The great advantage of using Galileo is the speed and ease of managing your money. Forget about long transfer processes. With just one click, you can convert your cryptocurrencies to colones or dollars (USD), and have those funds immediately available in your IBAN account associated with Galileo, ready to use."
+            "answer": "The great advantage of using Galileo is the speed and ease of managing your money. Forget about long transfer processes. With just one click, you can convert your digital assets to colones or dollars (USD), and have those funds immediately available in your IBAN account associated with Galileo, ready to use."
           }
         ]
       }

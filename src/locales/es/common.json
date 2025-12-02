@@ -21,7 +21,7 @@
     "items": [
       {
         "title": "Todo tu dinero en un solo lugar",
-        "description": "Manejá colones, dólares y activos digitales desde una sola app moderna y poderosa. Cambiá entre FIAT y cripto al instante, con total transparencia en tasas y sin sorpresas."
+        "description": "Manejá colones, dólares y activos digitales desde una sola app moderna y poderosa. Cambiá entre FIAT y activos digitales al instante, con total transparencia en tasas y sin sorpresas."
       },
       {
         "title": "Enviá y recibí dinero al instante",
@@ -29,7 +29,7 @@
       },
       {
         "title": "Pagá y cobrá sin estrés",
-        "description": "Cobrale a clientes locales o turistas desde un solo punto de venta, aceptando colones, dólares o cripto. Simplificá tus cobros y mantené tu negocio siempre en movimiento."
+        "description": "Cobrale a clientes locales o turistas desde un solo punto de venta, aceptando colones, dólares o activos digitales. Simplificá tus cobros y mantené tu negocio siempre en movimiento."
       },
       {
         "title": "Hacé crecer tu dinero",
@@ -253,7 +253,7 @@
             "answer": "Generalmente en minutos."
           },
           {
-            "question": "¿Puedo tener colones, dólares y cripto al mismo tiempo?",
+            "question": "¿Puedo tener colones, dólares y activos digitales al mismo tiempo?",
             "answer": "Sí, puedes manejar balances múltiples simultáneamente."
           }
         ]
@@ -291,11 +291,11 @@
             "answer": "Las principales stablecoins soportadas en la plataforma (USDT, USDC)."
           },
           {
-            "question": "¿Puedo enviar cripto a una billetera externa?",
+            "question": "¿Puedo enviar activos digitales a una billetera externa?",
             "answer": "Sí, siempre que uses la red correcta."
           },
           {
-            "question": "¿Qué hago si deposite cripto a una red equivocada?",
+            "question": "¿Qué hago si deposité activos digitales a una red equivocada?",
             "answer": "En la mayoría de casos no es recuperable. Contacta el soporte, pero puede no haber solución."
           }
         ]
@@ -434,43 +434,43 @@
         ]
       },
       {
-        "title": "Criptomonedas: Conceptos básicos",
+        "title": "Activos digitales: Conceptos básicos",
         "items": [
           {
-            "question": "¿Qué es una criptomoneda?",
+            "question": "¿Qué es un activo digital?",
             "answer": "Es una moneda digital o virtual que está asegurada por criptografía. Es descentralizada, es decir, no está controlada por ningún banco o gobierno."
           },
           {
             "question": "¿Qué es la tecnología Blockchain (cadena de bloques)?",
-            "answer": "Es un registro digital distribuido e inmutable que almacena las transacciones en \"bloques\" enlazados. Es la tecnología base de la mayoría de las criptomonedas."
+            "answer": "Es un registro digital distribuido e inmutable que almacena las transacciones en \"bloques\" enlazados. Es la tecnología base de la mayoría de los activos digitales."
           },
           {
-            "question": "¿Cuál fue la primera criptomoneda y la más conocida?",
+            "question": "¿Cuál fue el primer activo digital y el más conocido?",
             "answer": "Bitcoin (BTC), creada en 2009."
           },
           {
             "question": "¿Qué es una \"altcoin\"?",
-            "answer": "Es cualquier criptomoneda que no sea Bitcoin. El ejemplo más famoso es Ethereum (ETH)."
+            "answer": "Es cualquier activo digital que no sea Bitcoin. El ejemplo más famoso es Ethereum (ETH)."
           },
           {
-            "question": "¿Qué es una billetera (wallet) de criptomonedas?",
-            "answer": "Es un software o dispositivo físico que te permite almacenar tus claves privadas para acceder y gestionar tus criptomonedas."
+            "question": "¿Qué es una billetera (wallet) de activos digitales?",
+            "answer": "Es un software o dispositivo físico que te permite almacenar tus claves privadas para acceder y gestionar tus activos digitales."
           },
           {
             "question": "¿Qué son las Stablecoins (monedas estables)?",
-            "answer": "Son un tipo de criptomoneda cuyo valor está vinculado a un activo estable, como el dólar estadounidense (USD). Su objetivo es ofrecer la estabilidad del dinero tradicional con la flexibilidad de las criptomonedas. Un ejemplo popular es USDT (Tether)."
+            "answer": "Son un tipo de activo digital cuyo valor está vinculado a un activo estable, como el dólar estadounidense (USD). Su objetivo es ofrecer la estabilidad del dinero tradicional con la flexibilidad de los activos digitales. Un ejemplo popular es USDT (Tether)."
           },
           {
             "question": "¿Qué es una empresa Fintech?",
             "answer": "Una Fintech como Galileo usa la tecnología para ofrecer servicios financieros de forma más fácil y moderna (pagos digitales, billeteras, etc.). Nuestro valor agregado es que brindamos estos servicios directamente al cliente."
           },
           {
-            "question": "¿Qué significa que una criptomoneda es \"volátil\"?",
+            "question": "¿Qué significa que un activo digital es \"volátil\"?",
             "answer": "Significa que su precio puede subir o bajar de forma muy rápida y significativa en cortos períodos, lo que implica un alto riesgo."
           },
           {
-            "question": "¿Qué significa elegir la \"Red\" al enviar criptomonedas (como USDT)?",
-            "answer": "La \"Red\" es la carretera digital por la que viaja tu criptomoneda. Es absolutamente crucial que la red de envío y la red de recepción sean la misma (ej. si envías por TRON, el destino debe aceptar TRON). Si no coinciden:\n\n1. Los fondos pueden perderse permanentemente si la red de destino no existe en la plataforma.\n2. En otros casos, pueden requerirse procesos de recuperación largos y costosos, o el pago de comisiones adicionales.\n\nPor eso, siempre se debe verificar la red antes de enviar."
+            "question": "¿Qué significa elegir la \"Red\" al enviar activos digitales (como USDT)?",
+            "answer": "La \"Red\" es la carretera digital por la que viaja tu activo digital. Es absolutamente crucial que la red de envío y la red de recepción sean la misma (ej. si envías por TRON, el destino debe aceptar TRON). Si no coinciden:\n\n1. Los fondos pueden perderse permanentemente si la red de destino no existe en la plataforma.\n2. En otros casos, pueden requerirse procesos de recuperación largos y costosos, o el pago de comisiones adicionales.\n\nPor eso, siempre se debe verificar la red antes de enviar."
           }
         ]
       },
@@ -479,7 +479,7 @@
         "items": [
           {
             "question": "¿Cómo funciona la conversión instantánea en Galileo?",
-            "answer": "La gran ventaja de usar Galileo es la velocidad y la facilidad para manejar tu dinero. Olvídate de largos procesos de transferencia. Con un solo clic, puedes convertir tus criptomonedas a colones o dólares (USD), y tener esos fondos inmediatamente disponibles en tu cuenta IBAN asociada a Galileo, listos para usar."
+            "answer": "La gran ventaja de usar Galileo es la velocidad y la facilidad para manejar tu dinero. Olvídate de largos procesos de transferencia. Con un solo clic, puedes convertir tus activos digitales a colones o dólares (USD), y tener esos fondos inmediatamente disponibles en tu cuenta IBAN asociada a Galileo, listos para usar."
           }
         ]
       }
