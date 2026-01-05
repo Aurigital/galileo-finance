@@ -3,8 +3,8 @@ import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css";
-import GoogleAnalytics from "./components/GoogleAnalytics";
 import FacebookPixel from "./components/FacebookPixel";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -138,6 +138,7 @@ export default function RootLayout({ children }) {
           <FacebookPixel pixelId={process.env.NEXT_PUBLIC_FB_PIXEL_ID} />
         )}
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
