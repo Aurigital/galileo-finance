@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://galileocapital.io";
+  const baseUrl = "https://www.galileo.finance";
   const now = new Date();
   return [
     {

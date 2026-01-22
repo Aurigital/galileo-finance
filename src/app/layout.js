@@ -9,7 +9,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://galileocapital.io"),
+  metadataBase: new URL("https://www.galileo.finance"),
   title: {
     default: "Galileo — Fintech en Costa Rica | Tu dinero, más fácil y moderno",
     template: "%s | Galileo",
@@ -38,7 +38,7 @@ export const metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    url: "https://galileocapital.io/",
+    url: "https://www.galileo.finance/",
     title: "Galileo — Fintech en Costa Rica | Tu dinero, más fácil y moderno",
     description:
       "Controlá todo tu dinero y activos digitales desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
@@ -116,8 +116,8 @@ export default function RootLayout({ children }) {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Galileo",
-            "url": "https://galileocapital.io/",
-            "logo": "https://galileocapital.io/android-chrome-512x512.png",
+            "url": "https://www.galileo.finance/",
+            "logo": "https://www.galileo.finance/android-chrome-512x512.png",
             "sameAs": [
               "https://www.instagram.com/galileo.capital/"
             ],

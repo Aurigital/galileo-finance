@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = "https://galileocapital.io";
+  const baseUrl = "https://www.galileo.finance";
   return {
     rules: {
       userAgent: "*",
