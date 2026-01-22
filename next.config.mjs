@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  compress: true, 
-  output: "export",
+  compress: true,
   distDir: "build",
   images: {
-    unoptimized: true
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'galieloblog.aurigital.com',
+      }
+    ]
   }
 };
 
