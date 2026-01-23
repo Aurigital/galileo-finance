@@ -119,14 +119,14 @@ export async function getAllPostSlugs() {
 /**
  * Fetch categories
  * @param {string} lang - Language code (optional)
- * @returns {Promise<Array>} Array of categories
+ * @returns {Promise<Object>} Object with categories array and categoriesMap
  */
 export async function getCategories(lang = null) {
   try {
-    let url = `${WORDPRESS_API_URL}/categories`;
+    let url = `${WORDPRESS_API_URL}/categories?per_page=100`;
 
     if (lang) {
-      url += `?lang=${lang}`;
+      url += `&lang=${lang}`;
     }
 
     const res = await fetch(url, {
@@ -137,10 +137,87 @@ export async function getCategories(lang = null) {
       throw new Error(`Failed to fetch categories: ${res.status}`);
     }
 
-    return await res.json();
+    const categories = await res.json();
+
+    // Create a map of slug -> id for filtering
+    const categoriesMap = {};
+    categories.forEach(cat => {
+      categoriesMap[cat.slug] = cat.id;
+    });
+
+    return { categories, categoriesMap };
   } catch (error) {
     console.error('Error fetching categories:', error);
-    return [];
+    return { categories: [], categoriesMap: {} };
+  }
+}
+
+/**
+ * Fetch posts with advanced options (for client-side filtering)
+ * @param {Object} options - Query options
+ * @returns {Promise<Object>} Posts and pagination info
+ */
+export async function getPostsAdvanced(options = {}) {
+  const {
+    page = 1,
+    perPage = 10,
+    categories = [],
+    search = '',
+    orderBy = 'date',
+    lang = null
+  } = options;
+
+  try {
+    let url = `${WORDPRESS_API_URL}/posts?_embed&per_page=${perPage}&page=${page}`;
+
+    // Add category filter
+    if (categories.length > 0) {
+      url += `&categories=${categories.join(',')}`;
+    }
+
+    // Add search filter
+    if (search) {
+      url += `&search=${encodeURIComponent(search)}`;
+    }
+
+    // Add ordering
+    if (orderBy === 'title-asc') {
+      url += '&orderby=title&order=asc';
+    } else if (orderBy === 'title-desc') {
+      url += '&orderby=title&order=desc';
+    } else {
+      url += '&orderby=date&order=desc';
+    }
+
+    // Add language filter
+    if (lang) {
+      url += `&lang=${lang}`;
+    }
+
+    const res = await fetch(url, {
+      cache: 'no-store' // For client-side dynamic filtering
+    });
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch posts: ${res.status}`);
+    }
+
+    const posts = await res.json();
+    const totalPages = parseInt(res.headers.get('X-WP-TotalPages') || '1');
+    const totalItems = parseInt(res.headers.get('X-WP-Total') || '0');
+
+    return {
+      posts,
+      totalPages,
+      totalItems
+    };
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    return {
+      posts: [],
+      totalPages: 0,
+      totalItems: 0
+    };
   }
 }
 
@@ -182,4 +259,75 @@ export function formatDate(dateString, locale = 'es') {
     month: 'long',
     day: 'numeric'
   });
+}
+
+/**
+ * Get primary category from post
+ * @param {Object} post - Post object
+ * @returns {string} Category name
+ */
+export function getCategory(post) {
+  if (post._embedded && post._embedded['wp:term']) {
+    const categories = post._embedded['wp:term'][0];
+    if (categories && categories.length > 0) {
+      return categories[0].name;
+    }
+  }
+  return 'General';
+}
+
+/**
+ * Get related posts by category
+ * @param {number} categoryId - Category ID
+ * @param {number} excludeId - Post ID to exclude
+ * @param {number} limit - Number of posts to return
+ * @returns {Promise<Array>} Array of related posts
+ */
+export async function getRelatedPosts(categoryId, excludeId, limit = 3) {
+  try {
+    const url = `${WORDPRESS_API_URL}/posts?_embed&categories=${categoryId}&exclude=${excludeId}&per_page=${limit}&orderby=date&order=desc`;
+
+    const res = await fetch(url, {
+      next: { revalidate: 3600 }
+    });
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch related posts: ${res.status}`);
+    }
+
+    return await res.json();
+  } catch (error) {
+    console.error('Error fetching related posts:', error);
+    return [];
+  }
+}
+
+/**
+ * Clean HTML entities and tags from string
+ * @param {string} html - HTML string to clean
+ * @returns {string} Cleaned string
+ */
+export function cleanHtml(html) {
+  if (!html) return '';
+  // Remove HTML tags
+  let text = html.replace(/<\/?[^>]+(>|$)/g, '');
+  // Decode HTML entities
+  const entities = {
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&#039;': "'",
+    '&nbsp;': ' ',
+    '&#8217;': "'",
+    '&#8216;': "'",
+    '&#8220;': '"',
+    '&#8221;': '"',
+    '&#8211;': '–',
+    '&#8212;': '—'
+  };
+  Object.keys(entities).forEach(entity => {
+    text = text.replace(new RegExp(entity, 'g'), entities[entity]);
+  });
+  return text.trim();
 }
