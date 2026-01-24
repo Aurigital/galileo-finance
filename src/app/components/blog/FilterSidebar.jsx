@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useContext, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 import { IoClose, IoSearch } from 'react-icons/io5';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { IoMail } from "react-icons/io5";
@@ -11,6 +12,7 @@ import { SearchContext } from '../../../lib/SearchContext';
 import { getCategories, getPostsAdvanced, getFeaturedImage, formatDate, cleanHtml, getCategory } from '../../../lib/wordpress';
 
 const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen = () => { } }) => {
+  const { t, i18n } = useTranslation();
   const router = useRouter();
   const searchParams = useSearchParams();
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
@@ -62,7 +64,10 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
 
     const fetchCategories = async () => {
       try {
-        const { categories, categoriesMap } = await getCategories();
+        // Get current language for Polylang
+        const currentLang = i18n.language || 'es';
+
+        const { categories, categoriesMap } = await getCategories(currentLang);
 
         if (!isMounted) return;
 
@@ -95,7 +100,8 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
         if (destacadosId && isMounted) {
           const result = await getPostsAdvanced({
             perPage: 3,
-            categories: [destacadosId]
+            categories: [destacadosId],
+            lang: currentLang
           });
           if (isMounted) {
             setFeaturedPosts(result.posts);
@@ -158,7 +164,7 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
     <div className="w-full lg:w-72 text-[#C7C7C7] flex flex-col justify-center h-full gap-10 font-poppins">
 
       <div>
-        <h2 className="font-poppins font-medium text-xl mb-2 text-[#C7C7C7]">Buscar</h2>
+        <h2 className="font-poppins font-medium text-xl mb-2 text-[#C7C7C7]">{t('blog.search')}</h2>
         <form onSubmit={handleSearch} className="relative">
           <button type="submit" className="absolute left-3 top-2">
             <IoSearch className="w-5 h-5 text-[#6E6E6E]" />
@@ -167,14 +173,14 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="¿Qué estás buscando?"
+            placeholder={t('blog.searchPlaceholder')}
             className="w-full bg-transparent border border-white/10 pl-10 rounded-lg px-4 py-2 text-sm text-gray-300 placeholder-[#6E6E6E] focus:outline-none"
           />
         </form>
       </div>
 
       <div>
-      <h2 className="font-poppins font-medium text-xl mb-2 text-[#C7C7C7]">Filtrar por categoría</h2>
+      <h2 className="font-poppins font-medium text-xl mb-2 text-[#C7C7C7]">{t('blog.filterByCategory')}</h2>
         {loading ? (
           <div className="flex flex-wrap gap-2 animate-pulse">
             {[1, 2, 3, 4, 5].map((i) => (
@@ -205,7 +211,7 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
       </div>
 
       <div>
-        <h2 className="font-poppins font-medium text-xl mb-4 text-[#C7C7C7]">Otros Posts</h2>
+        <h2 className="font-poppins font-medium text-xl mb-4 text-[#C7C7C7]">{t('blog.otherPosts')}</h2>
         {loadingFeatured ? (
           <div className="space-y-3">
             {[1, 2, 3].map((i) => (
@@ -252,12 +258,12 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
             ))}
           </div>
         ) : (
-          <p className="text-sm text-[#6E6E6E]">No hay posts destacados</p>
+          <p className="text-sm text-[#6E6E6E]">{t('blog.noFeaturedPosts')}</p>
         )}
       </div>
 
       <div>
-        <h2 className="font-poppins font-medium text-xl mb-2 text-[#C7C7C7]">Contáctanos</h2>
+        <h2 className="font-poppins font-medium text-xl mb-2 text-[#C7C7C7]">{t('blog.contactUs')}</h2>
         <div className="grid gap-2">
           <a
             href="mailto:contacto@galileo.finance"

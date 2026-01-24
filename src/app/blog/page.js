@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, Suspense, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import FilterSidebar from '../components/blog/FilterSidebar';
 import NewsGrid from '../components/blog/NewsGrid';
 import { SearchProvider } from '../../lib/SearchContext';
@@ -8,24 +9,23 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 function BlogContent() {
+  const { t } = useTranslation();
   const [filters, setFilters] = useState({ categories: [] });
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
   useEffect(() => {
-    document.title = 'Blog | Galileo Capital - Artículos y Noticias';
+    document.title = t('blog.pageTitle');
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content',
-        'Descubre los últimos artículos y noticias de Galileo Capital. Información sobre finanzas, inversiones y activos digitales.'
-      );
+      metaDescription.setAttribute('content', t('blog.metaDescription'));
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Descubre los últimos artículos y noticias de Galileo Capital. Información sobre finanzas, inversiones y activos digitales.';
+      meta.content = t('blog.metaDescription');
       document.head.appendChild(meta);
     }
-  }, []);
+  }, [t]);
 
   const handleFilterChange = useCallback((newFilters) => {
     setFilters(newFilters);
@@ -37,7 +37,7 @@ function BlogContent() {
 
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-16">
           <div className="flex-1 order-2">
-            <Suspense fallback={<div className="text-gray-400">Cargando artículos...</div>}>
+            <Suspense fallback={<div className="text-gray-400">{t('blog.loadingPosts')}</div>}>
               <NewsGrid
                 filters={filters}
                 onOpenFilters={() => setIsMobileFiltersOpen(true)}
@@ -47,7 +47,7 @@ function BlogContent() {
 
           <div className="order-1"> 
             <div className="hidden lg:block lg:sticky lg:top-24">
-              <Suspense fallback={<div className="text-gray-400">Cargando filtros...</div>}>
+              <Suspense fallback={<div className="text-gray-400">{t('blog.loading')}</div>}>
                 <FilterSidebar
                   onFilterChange={handleFilterChange}
                   isMobileOpen={false}
@@ -67,7 +67,7 @@ function BlogContent() {
         <div className={`fixed right-0 top-0 h-full w-80 bg-[#0a0a0a] z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${isMobileFiltersOpen ? 'translate-x-0' : 'translate-x-full'
           }`}>
           <div className="p-4 h-full overflow-y-auto">
-            <Suspense fallback={<div className="text-gray-400">Cargando filtros...</div>}>
+            <Suspense fallback={<div className="text-gray-400">{t('blog.loading')}</div>}>
               <FilterSidebar
                 onFilterChange={handleFilterChange}
                 isMobileOpen={isMobileFiltersOpen}
@@ -88,13 +88,13 @@ export default function BlogPage() {
       <div className="min-h-screen bg-[#101010] relative overflow-hidden">
 
         <div
-          className="absolute -top-64 -right-64 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full opacity-70 blur-3xl pointer-events-none"
+          className="absolute -top-64 -right-64 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full blur-3xl pointer-events-none gradient-orb"
           style={{ background: 'radial-gradient(circle, #30F2FC 0%, #3B10D8 50%, transparent 70%)' }}
         />
 
         <div
-          className="absolute -bottom-64 -left-64 w-[500px] h-[500px] md:w-[600px] md:h-[600px] rounded-full opacity-70 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, #30F2FC 0%, #3B10D8 50%, transparent 70%)' }}
+          className="absolute -bottom-64 -left-64 w-[500px] h-[500px] md:w-[600px] md:h-[600px] rounded-full blur-3xl pointer-events-none gradient-orb-slow"
+          style={{ background: 'radial-gradient(circle, #30F2FC 0%, #3B10D8 50%, transparent 70%)', animationDelay: '4s' }}
         />
 
         <Navbar />

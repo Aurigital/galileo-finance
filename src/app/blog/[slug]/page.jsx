@@ -74,18 +74,18 @@ export default async function BlogPostPage({ params }) {
   return (
     <>
       <div className="min-h-screen bg-[#101010] relative overflow-hidden font-poppins">
-        {/* Degradados */}
+        {/* Degradados animados */}
         <div
-          className="absolute -top-64 -right-64 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full opacity-70 blur-3xl pointer-events-none"
+          className="absolute -top-64 -right-64 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full blur-3xl pointer-events-none gradient-orb"
           style={{ background: 'radial-gradient(circle, #30F2FC 0%, #3B10D8 50%, transparent 70%)' }}
         />
         <div
-          className="absolute top-1/2 -left-1/3 w-[500px] h-[500px] md:w-[1000px] md:h-[1000px] rounded-full opacity-70 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, #30F2FC 0%, #3B10D8 50%, transparent 70%)' }}
+          className="absolute top-1/2 -left-1/3 w-[500px] h-[500px] md:w-[1000px] md:h-[1000px] rounded-full blur-3xl pointer-events-none gradient-orb-slow"
+          style={{ background: 'radial-gradient(circle, #30F2FC 0%, #3B10D8 50%, transparent 70%)', animationDelay: '2s' }}
         />
         <div
-          className="absolute -bottom-64 -right-64 w-[500px] h-[500px] md:w-[600px] md:h-[600px] rounded-full opacity-70 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, #30F2FC 0%, #3B10D8 50%, transparent 70%)' }}
+          className="absolute -bottom-64 -right-64 w-[500px] h-[500px] md:w-[600px] md:h-[600px] rounded-full blur-3xl pointer-events-none gradient-orb-float"
+          style={{ background: 'radial-gradient(circle, #30F2FC 0%, #3B10D8 50%, transparent 70%)', animationDelay: '4s' }}
         />
 
         <Navbar />

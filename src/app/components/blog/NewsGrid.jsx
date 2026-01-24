@@ -2,12 +2,14 @@
 
 import { useState, useEffect, useContext, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 import NewsCard from './NewsCard';
 import { IoFilter, IoReload, IoChevronBack, IoChevronForward } from 'react-icons/io5';
 import { SearchContext } from '../../../lib/SearchContext';
 import { getPostsAdvanced, getCategories } from '../../../lib/wordpress';
 
 export default function NewsGrid({ filters, onOpenFilters }) {
+  const { t, i18n } = useTranslation();
   const searchParams = useSearchParams();
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,13 +33,14 @@ export default function NewsGrid({ filters, onOpenFilters }) {
 
   const POSTS_PER_PAGE = 6;
 
-  // Load categories map once on mount
+  // Load categories map once on mount (and when language changes)
   useEffect(() => {
     let isMounted = true;
+    const currentLang = i18n.language || 'es';
 
     const fetchCategoriesMap = async () => {
       try {
-        const { categoriesMap: catMap } = await getCategories();
+        const { categoriesMap: catMap } = await getCategories(currentLang);
         if (isMounted) {
           setCategoriesMap(catMap);
         }
@@ -54,13 +57,14 @@ export default function NewsGrid({ filters, onOpenFilters }) {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [i18n.language]);
 
   // Fetch posts when dependencies change
   useEffect(() => {
     if (categoriesMap === null) return;
 
     let isMounted = true;
+    const currentLang = i18n.language || 'es';
 
     const fetchPosts = async () => {
       try {
@@ -78,7 +82,8 @@ export default function NewsGrid({ filters, onOpenFilters }) {
           perPage: POSTS_PER_PAGE,
           categories: categoryIds,
           search: effectiveSearchTerm || '',
-          orderBy: sortBy
+          orderBy: sortBy,
+          lang: currentLang
         });
 
         if (isMounted) {
@@ -102,7 +107,7 @@ export default function NewsGrid({ filters, onOpenFilters }) {
     return () => {
       isMounted = false;
     };
-  }, [categoriesMap, page, filters, effectiveSearchTerm, sortBy, retryTrigger]);
+  }, [categoriesMap, page, filters, effectiveSearchTerm, sortBy, retryTrigger, i18n.language]);
 
   // Reset page to 1 when filters/search/sort change (but not on initial mount)
   useEffect(() => {
@@ -163,7 +168,7 @@ export default function NewsGrid({ filters, onOpenFilters }) {
         <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
           <div className="rounded-lg p-6 max-w-md">
             <h3 className="text-lg font-semibold text-[#3B10D8] mb-2">
-              Error al cargar artículos
+              {t('blog.error')}
             </h3>
             <p className="text-[#6E6E6E] mb-4">{error}</p>
             <button
@@ -171,7 +176,7 @@ export default function NewsGrid({ filters, onOpenFilters }) {
               className="flex items-center gap-2 mx-auto text-white border border-white/10 px-4 py-2 rounded-lg hover:border-[#3B10D8] hover:text-[#3B10D8] transition-all duration-300"
             >
               <IoReload className="w-4 h-4" />
-              Reintentar
+              {t('blog.retry')}
             </button>
           </div>
         </div>
@@ -182,7 +187,7 @@ export default function NewsGrid({ filters, onOpenFilters }) {
   return (
     <div className="flex-1 font-poppins">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="font-poppins font-medium text-xl text-[#C7C7C7]">Últimas Publicaciones</h2>
+        <h2 className="font-poppins font-medium text-xl text-[#C7C7C7]">{t('blog.latestPosts')}</h2>
 
         <div className="flex items-center gap-4">
           {totalPages > 1 && !loading && (
@@ -234,7 +239,7 @@ export default function NewsGrid({ filters, onOpenFilters }) {
             className="lg:hidden flex items-center gap-2 bg-[#3B10D8] text-[#C7C7C7] px-3 py-2 rounded-lg hover:border-[#3B10D8] hover:text-[#3B10D8] transition-colors"
           >
             <IoFilter className="w-4 h-4" />
-            <span className="text-sm font-medium">Filtros</span>
+            <span className="text-sm font-medium">{t('blog.filters')}</span>
           </button>
         </div>
       </div>
@@ -316,8 +321,8 @@ export default function NewsGrid({ filters, onOpenFilters }) {
       {!loading && posts.length === 0 && (
         <div className="text-center py-12">
           <p className="text-[#6E6E6E] text-lg">
-            No se encontraron artículos
-            {effectiveSearchTerm && ` para "${effectiveSearchTerm}"`}
+            {t('blog.noResults')}
+            {effectiveSearchTerm && ` "${effectiveSearchTerm}"`}
           </p>
         </div>
       )}

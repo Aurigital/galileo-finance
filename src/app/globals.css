@@ -322,7 +322,7 @@
 .prose h3.wp-block-heading,
 .prose h4.wp-block-heading {
   font-weight: bold;
-  color: #E5754C;
+  color: #3B10D8;
   margin-bottom: 0.5em;
 }
 
@@ -731,4 +731,57 @@
   .blog-content {
     font-size: 0.95rem;
   }
+}
+
+/* ==========================================
+   Gradient Orb Animations
+   ========================================== */
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.35) translate(40px, -30px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes breathe-slow {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.3) translate(-50px, 40px);
+    opacity: 0.85;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translateY(-50px) translateX(30px) scale(1.25);
+    opacity: 0.85;
+  }
+  66% {
+    transform: translateY(30px) translateX(-40px) scale(1.15);
+    opacity: 0.75;
+  }
+}
+
+.gradient-orb {
+  animation: breathe 6s ease-in-out infinite;
+}
+
+.gradient-orb-slow {
+  animation: breathe-slow 8s ease-in-out infinite;
+}
+
+.gradient-orb-float {
+  animation: float 10s ease-in-out infinite;
 }

@@ -158,6 +158,28 @@
     "provider": "Digital assets services are provided by Galileo Capital LLC, a US FINCEN registered company."
   },
   "rates": {"buy": "Compra", "sell": "Venta"},
+  "blog": {
+    "pageTitle": "Blog | Galileo Capital - Artículos y Noticias",
+    "metaDescription": "Descubre los últimos artículos y noticias de Galileo Capital. Información sobre finanzas, inversiones y activos digitales.",
+    "latestPosts": "Últimas Publicaciones",
+    "search": "Buscar",
+    "searchPlaceholder": "¿Qué estás buscando?",
+    "filterByCategory": "Filtrar por categoría",
+    "otherPosts": "Otros Posts",
+    "noFeaturedPosts": "No hay posts destacados",
+    "contactUs": "Contáctanos",
+    "relatedPosts": "Descubre posts similares",
+    "loading": "Cargando...",
+    "loadingPosts": "Cargando artículos...",
+    "error": "Error al cargar artículos",
+    "retry": "Reintentar",
+    "filters": "Filtros",
+    "noResults": "No se encontraron artículos",
+    "noResultsFor": "No se encontraron artículos para",
+    "postNotFound": "Post no encontrado",
+    "postNotFoundMessage": "El artículo que buscas no existe o ha sido eliminado.",
+    "backToBlog": "Volver al blog"
+  },
   "faq": {
     "title": "Preguntas Frecuentes",
     "subtitle": "Encontrá respuestas rápidas a las preguntas más comunes sobre Galileo",
