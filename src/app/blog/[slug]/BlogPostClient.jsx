@@ -1,11 +1,23 @@
 'use client';
 
-import { Suspense } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 import FilterSidebar from '../../components/blog/FilterSidebar';
 import Breadcrumbs from '../../components/blog/Breadcrumbs';
 import { SearchProvider } from '../../../lib/SearchContext';
 
 export default function BlogPostClient({ children, relatedContent, category, title }) {
+  const { i18n } = useTranslation();
+  const router = useRouter();
+  const initialLang = useRef(i18n.language);
+
+  useEffect(() => {
+    if (initialLang.current && i18n.language !== initialLang.current) {
+      router.push('/blog');
+    }
+  }, [i18n.language, router]);
+
   return (
     <SearchProvider>
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 py-20 md:py-28">
