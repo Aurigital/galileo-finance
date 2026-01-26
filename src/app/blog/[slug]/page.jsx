@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Navbar from '../../components/navbar';
-import Footer from '../../components/footer';
+import Footer from '../../components/Footer';
 import RelatedNewsGrid from '../../components/blog/RelatedNewsGrid';
 import BlogPostClient from './BlogPostClient';
 import {
@@ -93,6 +93,8 @@ export default async function BlogPostPage({ params }) {
         <main className="relative z-10">
           <div className="px-6 sm:px-8 max-w-7xl mx-auto">
             <BlogPostClient
+              category={category}
+              title={title}
               relatedContent={
                 relatedPosts.length > 0 ? (
                   <div className="mt-16">

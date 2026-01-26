@@ -6,7 +6,7 @@ import FilterSidebar from '../components/blog/FilterSidebar';
 import NewsGrid from '../components/blog/NewsGrid';
 import { SearchProvider } from '../../lib/SearchContext';
 import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 
 function BlogContent() {
   const { t } = useTranslation();

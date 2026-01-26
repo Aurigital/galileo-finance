@@ -62,6 +62,11 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
   useEffect(() => {
     let isMounted = true;
 
+    // Reset loading states when language changes
+    setLoading(true);
+    setLoadingFeatured(true);
+    setFeaturedPosts([]);
+
     const fetchCategories = async () => {
       try {
         // Get current language for Polylang
@@ -126,7 +131,7 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [i18n.language]);
 
   // Only notify parent when filters actually change (not on initial load)
   useEffect(() => {
