@@ -24,6 +24,7 @@ export async function generateStaticParams() {
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
   const post = await getPostBySlug(params.slug);
+  const baseUrl = 'https://www.galileo.finance';
 
   if (!post) {
     return {
@@ -33,8 +34,9 @@ export async function generateMetadata({ params }) {
   }
 
   const title = cleanHtml(post.title.rendered);
-  const description = cleanHtml(post.excerpt.rendered);
+  const description = cleanHtml(post.excerpt.rendered).slice(0, 160);
   const image = getFeaturedImage(post);
+  const url = `${baseUrl}/blog/${params.slug}`;
 
   return {
     title: `${title} | Galileo Capital`,
@@ -42,10 +44,24 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: title,
       description: description,
-      images: image ? [image] : [],
+      url: url,
+      siteName: 'Galileo Finance',
+      images: image ? [{
+        url: image,
+        width: 1200,
+        height: 630,
+        alt: title,
+      }] : [],
       type: 'article',
-      publishedTime: post.date
-    }
+      publishedTime: post.date,
+      authors: [getAuthorName(post)],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: image ? [image] : [],
+    },
   };
 }
 
