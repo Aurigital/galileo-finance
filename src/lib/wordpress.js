@@ -1,4 +1,4 @@
-const WORDPRESS_API_URL = process.env.WORDPRESS_API_URL || 'https://galieloblog.aurigital.com/wp-json/wp/v2';
+const WORDPRESS_API_URL = process.env.WORDPRESS_API_URL || 'https://galileoblog.aurigital.com/wp-json/wp/v2';
 
 export async function getPosts(lang = null, per_page = 10, page = 1) {
   try {

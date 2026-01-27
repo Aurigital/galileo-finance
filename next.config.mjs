@@ -8,7 +8,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'galieloblog.aurigital.com',
+        hostname: 'galileoblog.aurigital.com',
       }
     ]
   }

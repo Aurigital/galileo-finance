@@ -37,7 +37,7 @@ galileo-finance/
 
 En `.env.local`:
 ```bash
-WORDPRESS_API_URL=https://galieloblog.aurigital.com/wp-json/wp/v2
+WORDPRESS_API_URL=https://galileoblog.aurigital.com/wp-json/wp/v2
 ```
 
 **IMPORTANTE:** Este archivo NO debe ser committeado a Git (ya está en .gitignore).
@@ -219,7 +219,7 @@ Los archivos tienen comentarios `TODO` marcados. Principales tareas:
 2. Settings → Environment Variables
 3. Agrega:
    ```
-   WORDPRESS_API_URL=https://galieloblog.aurigital.com/wp-json/wp/v2
+   WORDPRESS_API_URL=https://galileoblog.aurigital.com/wp-json/wp/v2
    ```
 4. Redeploy
 
@@ -271,7 +271,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'galieloblog.aurigital.com',
+        hostname: 'galileoblog.aurigital.com',
       }
     ]
   }
@@ -359,12 +359,12 @@ wp plugin install polylang --activate
 En **Settings → Languages → URL modifications**:
 
 Recomiendo usar **subdirectorios**:
-- Español: `galieloblog.aurigital.com/es/hello-world/`
-- English: `galieloblog.aurigital.com/en/hello-world/`
+- Español: `galileoblog.aurigital.com/es/hello-world/`
+- English: `galileoblog.aurigital.com/en/hello-world/`
 
 O usar **parámetros** (más simple para API):
-- `galieloblog.aurigital.com/hello-world/?lang=es`
-- `galieloblog.aurigital.com/hello-world/?lang=en`
+- `galileoblog.aurigital.com/hello-world/?lang=es`
+- `galileoblog.aurigital.com/hello-world/?lang=en`
 
 **Para API REST, ambas opciones funcionan igual.**
 
@@ -381,17 +381,17 @@ O usar **parámetros** (más simple para API):
 
 ### Ver posts en español:
 ```
-https://galieloblog.aurigital.com/wp-json/wp/v2/posts?lang=es
+https://galileoblog.aurigital.com/wp-json/wp/v2/posts?lang=es
 ```
 
 ### Ver posts en inglés:
 ```
-https://galieloblog.aurigital.com/wp-json/wp/v2/posts?lang=en
+https://galileoblog.aurigital.com/wp-json/wp/v2/posts?lang=en
 ```
 
 ### Ver todos los posts (sin filtro de idioma):
 ```
-https://galieloblog.aurigital.com/wp-json/wp/v2/posts
+https://galileoblog.aurigital.com/wp-json/wp/v2/posts
 ```
 
 ## Paso 6: Verificar en el Frontend de Galileo
@@ -454,4 +454,4 @@ La integración base está completa. Ahora puedes:
 
 **Creado:** 22 de enero, 2026
 **Branch:** `blog-headless`
-**WordPress:** `galieloblog.aurigital.com`
+**WordPress:** `galileoblog.aurigital.com`
