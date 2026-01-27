@@ -100,12 +100,13 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
         // Notify parent of initial filters
         onFilterChange?.({ categories: urlFilters.categories });
 
-        // Fetch featured posts (categoría "destacados")
-        const destacadosId = categoriesMap['destacados'];
-        if (destacadosId && isMounted) {
+        // Fetch featured posts (categoría "destacados" en español, "featured" en inglés)
+        const featuredSlug = currentLang === 'en' ? 'featured' : 'destacados';
+        const featuredId = categoriesMap[featuredSlug];
+        if (featuredId && isMounted) {
           const result = await getPostsAdvanced({
             perPage: 3,
-            categories: [destacadosId],
+            categories: [featuredId],
             lang: currentLang
           });
           if (isMounted) {
@@ -166,7 +167,7 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
   };
 
   return (
-    <div className="w-full lg:w-72 text-[#C7C7C7] flex flex-col justify-center h-full gap-10 font-poppins">
+    <div className="w-full lg:w-72 text-[#C7C7C7] flex flex-col gap-10 font-poppins">
 
       <div>
         <h2 className="font-poppins font-medium text-xl mb-2 text-[#C7C7C7]">{t('blog.search')}</h2>

@@ -8,10 +8,9 @@ import { SearchProvider } from '../../lib/SearchContext';
 import Navbar from '../components/navbar';
 import Footer from '../components/Footer';
 
-function BlogContent() {
+function BlogContent({ isMobileFiltersOpen, setIsMobileFiltersOpen }) {
   const { t } = useTranslation();
   const [filters, setFilters] = useState({ categories: [] });
-  const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
   useEffect(() => {
     document.title = t('blog.pageTitle');
@@ -64,9 +63,20 @@ function BlogContent() {
           onClick={() => setIsMobileFiltersOpen(false)}
         />
 
-        <div className={`fixed right-0 top-0 h-full w-80 bg-[#0a0a0a] z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${isMobileFiltersOpen ? 'translate-x-0' : 'translate-x-full'
+        <div className={`fixed right-0 top-0 h-full w-80 bg-[#0a0a0a] z-50 transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col ${isMobileFiltersOpen ? 'translate-x-0' : 'translate-x-full'
           }`}>
-          <div className="p-4 h-full overflow-y-auto">
+          <div className="flex justify-end p-4 flex-shrink-0">
+            <button
+              onClick={() => setIsMobileFiltersOpen(false)}
+              className="p-2 text-[#C7C7C7] hover:text-white transition-colors"
+              aria-label="Cerrar filtros"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div className="px-4 pb-8 flex-1 overflow-y-auto scrollbar-hide">
             <Suspense fallback={<div className="text-gray-400">{t('blog.loading')}</div>}>
               <FilterSidebar
                 onFilterChange={handleFilterChange}
@@ -82,6 +92,8 @@ function BlogContent() {
 }
 
 export default function BlogPage() {
+  const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
+
   return (
     <>
     <SearchProvider>
@@ -97,9 +109,12 @@ export default function BlogPage() {
           style={{ background: 'radial-gradient(circle, #30F2FC 0%, #3B10D8 50%, transparent 70%)', animationDelay: '4s' }}
         />
 
-        <Navbar />
+        <Navbar hidden={isMobileFiltersOpen} />
         <div className="py-12 md:py-20 relative z-10">
-          <BlogContent />
+          <BlogContent
+            isMobileFiltersOpen={isMobileFiltersOpen}
+            setIsMobileFiltersOpen={setIsMobileFiltersOpen}
+          />
         </div>
       </div>
     </SearchProvider>

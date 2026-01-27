@@ -2,15 +2,15 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import '../../lib/i18n';
 
-const Navbar = () => {
+const Navbar = ({ hidden = false }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const pathname = usePathname();
+	const router = useRouter();
 	const { t, i18n } = useTranslation();
-
 
 	const navigation = [
 		{ name: t('nav.about'), href: '/#about' },
@@ -27,8 +27,22 @@ const Navbar = () => {
 		setIsMenuOpen((prev) => !prev);
 	};
 
+	const handleNavClick = (e, href) => {
+		if (href.includes('#') && pathname !== '/') {
+			e.preventDefault();
+			const hash = href.split('#')[1];
+			router.push('/');
+			setTimeout(() => {
+				const element = document.getElementById(hash);
+				if (element) {
+					element.scrollIntoView({ behavior: 'smooth' });
+				}
+			}, 100);
+		}
+	};
+
 	return (
-		<nav className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-sm">
+		<nav className={`fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-sm transition-transform duration-300 ${hidden ? '-translate-y-full lg:translate-y-0' : ''}`}>
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-20">
 					<div className="flex-shrink-0">
@@ -49,6 +63,7 @@ const Navbar = () => {
 								<Link
 									key={item.name}
 									href={item.href}
+									onClick={(e) => handleNavClick(e, item.href)}
 									className={`${
 										pathname === item.href
 											? 'text-[#D9D9D9] font-bold'
@@ -79,6 +94,7 @@ const Navbar = () => {
 						</Link>
 						<Link
 							href="#download"
+							onClick={(e) => handleNavClick(e, '#download')}
 							className="relative inline-flex text-center rounded-md font-bold font-inter bg-[#3B10D8] px-4 py-2.5 text-base text-white transition-all duration-300 hover:shadow-[0_12px_24px_-4px_rgba(99,102,241,0.65)]"
 						>
 							{t('cta.download')}
@@ -124,7 +140,10 @@ const Navbar = () => {
 							<Link
 								key={item.name}
 								href={item.href}
-								onClick={() => setIsMenuOpen(false)}
+								onClick={(e) => {
+									handleNavClick(e, item.href);
+									setIsMenuOpen(false);
+								}}
 								className={`${
 									pathname === item.href
 										? 'text-white bg-white/10 border-l-4 border-[#3B10D8]'
@@ -161,7 +180,10 @@ const Navbar = () => {
 						
 						<Link
 							href="#download"
-							onClick={() => setIsMenuOpen(false)}
+							onClick={(e) => {
+								handleNavClick(e, '#download');
+								setIsMenuOpen(false);
+							}}
 							className="block w-full text-center rounded-lg font-bold bg-[#3B10D8] px-6 py-4 text-lg text-white transition-all duration-300 hover:bg-[#3B10D8]/90 hover:shadow-[0_12px_24px_-4px_rgba(59,16,216,0.4)] transform hover:scale-[0.98] active:scale-[0.96]"
 						>
 							{t('cta.download')}
