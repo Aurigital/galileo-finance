@@ -2,7 +2,6 @@
 
 const nextConfig = {
   compress: true,
-  distDir: "build",
   images: {
     unoptimized: true,
     remotePatterns: [
