@@ -77,6 +77,9 @@ export const metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   applicationName: "Galileo",
+};
+
+export const viewport = {
   themeColor: "#ffffff",
 };
 
