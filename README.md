@@ -16,7 +16,7 @@ npm install
 npm run dev
 ```
 
-Visita `http://localhost:3000`
+Visita `http://localhost:3000` para ver el sitio localmente.
 
 ## Blog
 
