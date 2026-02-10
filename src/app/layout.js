@@ -15,12 +15,10 @@ export const metadata = {
     template: "%s | Galileo",
   },
   description:
-    "Controlá todo tu dinero y activos digitales desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
+    "Controlá todo tu dinero desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
   keywords: [
     "fintech",
     "Costa Rica",
-    "activos digitales",
-    "cripto",
     "colones",
     "dólares",
     "cuentas multidivisa",
@@ -41,7 +39,7 @@ export const metadata = {
     url: "https://www.galileo.finance/",
     title: "Galileo — Fintech en Costa Rica | Tu dinero, más fácil y moderno",
     description:
-      "Controlá todo tu dinero y activos digitales desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
+      "Controlá todo tu dinero desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
     siteName: "Galileo",
     locale: "es_CR",
     images: [
@@ -58,7 +56,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Galileo — Fintech en Costa Rica | Tu dinero, más fácil y moderno",
     description:
-      "Controlá todo tu dinero y activos digitales desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
+      "Controlá todo tu dinero desde un solo lugar de forma fácil, segura y siempre a tu alcance.",
     images: ["/android-chrome-512x512.png"],
   },
   robots: {
