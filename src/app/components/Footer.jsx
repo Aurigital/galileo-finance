@@ -82,8 +82,8 @@ const Footer = () => {
 
         {/* Legal */}
         <div className="mt-10 space-y-4 text-sm leading-relaxed">
-          <p className="text-white/70">{t('footer.disclaimer')}</p>
-          <p className="text-white/70">{t('footer.registry')}</p>
+          {/* <p className="text-white/70">{t('footer.disclaimer')}</p> */}
+          {/* <p className="text-white/70">{t('footer.registry')}</p> */}
           <p className="text-white/70">{t('footer.provider')}</p>
         </div>
       </div>
