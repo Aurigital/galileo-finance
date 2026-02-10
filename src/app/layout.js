@@ -60,11 +60,11 @@ export const metadata = {
     images: ["/android-chrome-512x512.png"],
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
     },
   },
   icons: {
