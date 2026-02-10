@@ -1,5 +1,15 @@
 const WORDPRESS_API_URL = process.env.WORDPRESS_API_URL || 'https://galileoblog.aurigital.com/wp-json/wp/v2';
 
+// Slugs de categorías de activos digitales a ocultar del blog
+const HIDDEN_CATEGORY_SLUGS = ['activos-digitales', 'digital-assets'];
+
+function filterHiddenCategories(posts) {
+  return posts.filter(post => {
+    const postCategories = post._embedded?.['wp:term']?.[0] || [];
+    return !postCategories.some(cat => HIDDEN_CATEGORY_SLUGS.includes(cat.slug));
+  });
+}
+
 export async function getPosts(lang = null, per_page = 10, page = 1) {
   try {
     const fetchPerPage = lang ? 100 : per_page;
@@ -25,6 +35,8 @@ export async function getPosts(lang = null, per_page = 10, page = 1) {
         );
       }
     }
+
+    posts = filterHiddenCategories(posts);
 
     let totalPosts = posts.length;
     let totalPages = Math.ceil(totalPosts / per_page) || 1;
@@ -130,6 +142,8 @@ export async function getPostsAdvanced(options = {}) {
         );
       }
     }
+
+    posts = filterHiddenCategories(posts);
 
     let totalItems = posts.length;
     let totalPages = Math.ceil(totalItems / perPage) || 1;

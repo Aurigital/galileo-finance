@@ -11,6 +11,9 @@ import Image from 'next/image';
 import { SearchContext } from '../../../lib/SearchContext';
 import { getCategories, getPostsAdvanced, getFeaturedImage, formatDate, cleanHtml, getCategory } from '../../../lib/wordpress';
 
+// Slugs de categorías de activos digitales a ocultar del blog
+const HIDDEN_BLOG_CATEGORY_SLUGS = ['activos-digitales', 'digital-assets'];
+
 const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen = () => { } }) => {
   const { t, i18n } = useTranslation();
   const router = useRouter();
@@ -78,6 +81,7 @@ const FilterSidebar = ({ onFilterChange, isMobileOpen = false, setIsMobileOpen =
 
         setAvailableFilters({
           categories: categories
+            .filter((cat) => !HIDDEN_BLOG_CATEGORY_SLUGS.includes(cat.slug))
             .map((cat) => ({
               label: cat.name,
               count: cat.count,

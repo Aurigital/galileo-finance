@@ -77,6 +77,18 @@ const FAQCategory = ({ title, items, isOpen, onToggle }) => {
 	);
 };
 
+// Índices de categorías a ocultar (0-based):
+// 5 = "Digital assets", 15 = "Digital assets: Basic concepts", 16 = "Instant conversion"
+const HIDDEN_CATEGORY_INDICES = [5, 15, 16];
+
+// Dentro de categorías mixtas, índices de preguntas a ocultar (0-based):
+// Categoría 3 "Funds": índice 0 ("How do I deposit money?") e índice 3 ("Can I have colones, dollars and digital assets...")
+// Categoría 9 "Business account": índice 0 ("Can I receive customer payments?")
+const HIDDEN_ITEM_INDICES = {
+	3: [0, 3],
+	9: [0],
+};
+
 const FAQ = () => {
 	const { t } = useTranslation();
 	const categories = t('faq.categories', { returnObjects: true });
@@ -85,6 +97,20 @@ const FAQ = () => {
 	const handleCategoryToggle = (index) => {
 		setOpenCategoryIndex(openCategoryIndex === index ? null : index);
 	};
+
+	const filteredCategories = Array.isArray(categories)
+		? categories
+				.map((category, originalIndex) => ({ category, originalIndex }))
+				.filter(({ originalIndex }) => !HIDDEN_CATEGORY_INDICES.includes(originalIndex))
+				.map(({ category, originalIndex }) => {
+					const hiddenItems = HIDDEN_ITEM_INDICES[originalIndex];
+					if (!hiddenItems) return category;
+					return {
+						...category,
+						items: category.items.filter((_, itemIndex) => !hiddenItems.includes(itemIndex)),
+					};
+				})
+		: [];
 
 	return (
 		<section id="faq" className="py-12 md:py-16">
@@ -103,7 +129,7 @@ const FAQ = () => {
 					{t('faq.subtitle')}
 				</p>
 				<div data-aos="fade-up" data-aos-delay="200">
-					{Array.isArray(categories) && categories.map((category, index) => (
+					{filteredCategories.map((category, index) => (
 						<FAQCategory
 							key={index}
 							title={category.title}
