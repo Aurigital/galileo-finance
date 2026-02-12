@@ -9,8 +9,8 @@ const ValueBanner = () => {
 		<section className="relative w-full h-[80vh] flex items-end md:items-center">
 			<div className="absolute inset-0">
 				<div
-					className="h-full w-full bg-cover bg-center"
-					style={{ backgroundImage: "url('/assets/ValueBanner.jpg')" }}
+					className="h-full w-full bg-cover bg-top"
+					style={{ backgroundImage: "url('/assets/ValueBanner2.png')" }}
 				/>
 				<div className="absolute inset-0 bg-gradient-to-tr from-[#3B10D8]/85 to-[#00FFFF]/40" />
                 <div className="absolute inset-0 bg-black/10"/>

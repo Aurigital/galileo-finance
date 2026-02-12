@@ -19,7 +19,7 @@ const Hero = () => {
 					
 					<div className="flex justify-center mb-4" data-aos="fade-up">
 						<Image
-							src="/assets/hero-phones.avif"
+							src="/assets/hero-phones2.png"
 							alt="App preview phones"
 							width={700}
 							height={600}
