@@ -3,10 +3,16 @@ const WORDPRESS_API_URL = process.env.WORDPRESS_API_URL || 'https://galileoblog.
 // Slugs de categorías de activos digitales a ocultar del blog
 const HIDDEN_CATEGORY_SLUGS = ['activos-digitales', 'digital-assets'];
 
+// Palabras clave en el título que indican contenido de activos digitales a ocultar
+const HIDDEN_TITLE_KEYWORDS = ['activos digitales', 'digital asset'];
+
 function filterHiddenCategories(posts) {
   return posts.filter(post => {
     const postCategories = post._embedded?.['wp:term']?.[0] || [];
-    return !postCategories.some(cat => HIDDEN_CATEGORY_SLUGS.includes(cat.slug));
+    const hasHiddenCategory = postCategories.some(cat => HIDDEN_CATEGORY_SLUGS.includes(cat.slug));
+    const title = (post.title?.rendered || '').toLowerCase();
+    const hasHiddenKeyword = HIDDEN_TITLE_KEYWORDS.some(kw => title.includes(kw));
+    return !hasHiddenCategory && !hasHiddenKeyword;
   });
 }
 
