@@ -1,6 +1,6 @@
 const WORDPRESS_API_URL = process.env.WORDPRESS_API_URL || 'https://galileoblog.aurigital.com/wp-json/wp/v2';
 
-// Slugs de categorías de activos digitales a ocultar del blog
+// Slugs de categorías de activos digitales a ocultar del blog (temporal)
 const HIDDEN_CATEGORY_SLUGS = ['activos-digitales', 'digital-assets'];
 
 // Palabras clave en el título que indican contenido de activos digitales a ocultar
