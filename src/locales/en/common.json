@@ -14,14 +14,14 @@
     "title_line1": "Your money,",
     "title_line2": "easier and modern",
     "subtitle_line1": "The promise is simple:",
-    "subtitle": "Control all your money and digital assets from one place, easily, securely, and always within reach."
+    "subtitle": "Control all your money and funds from one place, easily, securely, and always within reach."
   },
   "features": {
     "title": "What Galileo does for you",
     "items": [
       {
         "title": "All your money in one place",
-        "description": "Manage colones, dollars and digital assets from a single modern and powerful app. Switch between FIAT and digital assets instantly, with complete rate transparency and no surprises."
+        "description": "Manage colones, dollars and digital payments from a single modern and powerful app. Switch between FIAT and digital currencies instantly, with complete rate transparency and no surprises."
       },
       {
         "title": "Send and receive money instantly",
@@ -29,11 +29,11 @@
       },
       {
         "title": "Pay and get paid stress‑free",
-        "description": "Collect from local customers or tourists from a single point of sale, accepting colones, dollars or digital assets. Simplify your collections and keep your business always moving."
+        "description": "Collect from local customers or tourists from a single point of sale, accepting colones, dollars or digital payments. Simplify your collections and keep your business always moving."
       },
       {
         "title": "Grow your money",
-        "description": "Make your savings generate real returns with digital assets, without unnecessary locks. You have liquidity when you need it and earnings that exceed traditional banking."
+        "description": "Make your savings generate real returns with digital investments, without unnecessary locks. You have liquidity when you need it and earnings that exceed traditional banking."
       },
       {
         "title": "Tools for your modern life and tico business",
@@ -44,7 +44,7 @@
   "valueBanner": {
     "title_line": "Imagine a world without financial limits",
     "preamble": "We're not just another app;",
-    "bold": "we are the first Fintech that manages digital assets",
+    "bold": "we are the first Fintech that manages digital currencies",
     "postscript": "offering you a fluid, secure financial experience that truly understands you."
   },
   "crBanner": {
@@ -63,7 +63,7 @@
     "items": [
       {
         "title": "Grow your savings intelligently",
-        "description": "We're not just another app; we're the first fintech managing digital assets, offering you a financial experience that truly understands you.",
+        "description": "We're not just another app; we're the first Fintech managing digital currencies, offering you a smooth, secure financial experience that truly understands you.",
         "image": "/assets/services/services1.png"
       },
       {
@@ -99,7 +99,7 @@
       },
       {
         "title": "Deposit your funds",
-        "description": "Transfer colones or dollars from your local bank, receive or send digital assets from anywhere in the world."
+        "description": "Transfer colones or dollars from your local bank, receive or send digital funds from anywhere in the world."
       },
       {
         "title": "Start using your money",
@@ -137,8 +137,8 @@
     "title_line2": "For you!",
     "items": [
       {"title": "People seeking simplicity", "description": "If you want an easy and modern way to manage your daily expenses, pay bills and grow your savings."},
-      {"title": "Entrepreneurs and Freelancers", "description": "If you receive payments from abroad in dollars or digital assets, or need an efficient way to manage your growing business finances, simplifying your collections and payments."},
-      {"title": "Local businesses", "description": "If you want to offer your clients new payment options, including digital assets, and simplify your day‑to‑day financial management."}
+      {"title": "Entrepreneurs and Freelancers", "description": "If you receive payments from abroad in dollars or digital currencies, or need an efficient way to manage your growing business finances, simplifying your collections and payments."},
+      {"title": "Local businesses", "description": "If you want to offer your clients new payment options, including digital payments, and simplify your day‑to‑day financial management."}
     ],
     "images": [
       {"src": "/assets/a1.avif", "alt": "Group of young people chatting"},

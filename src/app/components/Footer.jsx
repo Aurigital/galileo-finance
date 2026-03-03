@@ -86,6 +86,30 @@ const Footer = () => {
           {/* <p className="text-white/70">{t('footer.registry')}</p> */}
           <p className="text-white/70">{t('footer.provider')}</p>
         </div>
+
+        {/* Disclaimer images */}
+        <div className="mt-8">
+          <Image
+            src="/assets/disclaimer-mobile.png"
+            alt="Disclaimer"
+            width={800}
+            height={600}
+            className="block md:hidden w-4/5 h-auto"
+            quality={90}
+            loading="lazy"
+            sizes="80vw"
+          />
+          <Image
+            src="/assets/disclaimer.png"
+            alt="Disclaimer"
+            width={1400}
+            height={300}
+            className="hidden md:block w-[70%] h-auto"
+            quality={90}
+            loading="lazy"
+            sizes="70vw"
+          />
+        </div>
       </div>
     </footer>
   );
